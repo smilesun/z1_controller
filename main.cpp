@@ -46,7 +46,26 @@ int main(int argc, char **argv){
     ctrlComp->geneObj();
     if(ctrlComp->ctrl == Control::SDK){
         ctrlComp->cmdPanel = new ARMSDK(events, emptyAction, "127.0.0.1", 8072, 8071, 0.002);
-    }else if(ctrlComp->ctrl == Control::KEYBOARD){
+    }
+    // 1. Default is Control::SDK in the struct definition. See include/control/CtrlComponents.h
+    //    (the Control ctrl = Control::SDK; member). 
+    //  2. main.cpp constructs CtrlComponents(argc, argv) on line 40, so any override happens inside that  constructor (likely via configProcess(argc, argv)). The actual constructor and configProcess implementation are not in the source tree; they’re inside the prebuilt shared library in lib/libZ1_x86_64.so. So from source alone, the only guaranteed behavior is: 
+    //  - default is SDK
+    //  - it can be overridden during construction based on argv or config, but the exact rule is hidden in the .so.
+    // You can reverse‑inspect the .so with a mix of lightweight tooling and full decompilation:              
+  // 1. Strings + symbol names (quickest)                                                                   
+  //    - Tools: strings, nm -C, objdump -T, readelf -s
+  //   - Goal: find readable error messages, config keys, CLI flags, or log strings.
+  //    - This is how we can often spot --keyboard, --sdk, etc.
+  // 2. Disassembly (medium effort)
+  //    - Tools: objdump -d -C, radare2, gdb
+  //    - Goal: inspect CtrlComponents::configProcess and see how ctrl is set.
+  //    - You’d look for comparisons against string literals or argv parsing.
+  // 3. Decompilation (most effective)
+  //    - Tools: Ghidra (free) or IDA (paid)
+  //    - Goal: reconstruct C‑like code of CtrlComponents::configProcess.
+  //   - This usually reveals the exact logic for ctrl.
+    else if(ctrlComp->ctrl == Control::KEYBOARD){
         events.push_back(new StateAction("`", (int)ArmFSMStateName::BACKTOSTART));
         events.push_back(new StateAction("1", (int)ArmFSMStateName::PASSIVE));
         events.push_back(new StateAction("2", (int)ArmFSMStateName::JOINTCTRL));
