@@ -1,0 +1,1590 @@
+
+/home/sunxd/robustCapture/unitree_ws/z1_controller/lib/libZ1_x86_64.so:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000000c2150 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)>:
+   c2150:	push   %rbp
+   c2151:	mov    %rsp,%rbp
+   c2154:	push   %r15
+   c2156:	push   %r14
+   c2158:	push   %r13
+   c215a:	push   %r12
+   c215c:	mov    %rsi,%r14
+   c215f:	push   %rbx
+   c2160:	mov    %rdx,%r13
+   c2163:	sub    $0x5e8,%rsp
+   c216a:	mov    %rdi,-0x598(%rbp)
+   c2171:	mov    %rcx,-0x5a8(%rbp)
+   c2178:	mov    %fs:0x28,%rbx
+   c2181:	mov    %rbx,-0x38(%rbp)
+   c2185:	xor    %ebx,%ebx
+   c2187:	mov    0x8(%rdi),%rbx
+   c218b:	movsd  %xmm0,-0x5a0(%rbp)
+   c2193:	movq   $0x0,-0x590(%rbp)
+   c219e:	movq   $0x0,-0x588(%rbp)
+   c21a9:	movq   $0x0,-0x580(%rbp)
+   c21b4:	movq   $0x0,-0x578(%rbp)
+   c21bf:	test   %ebx,%ebx
+   c21c1:	movq   $0x0,-0x570(%rbp)
+   c21cc:	movq   $0x0,-0x568(%rbp)
+   c21d7:	movl   $0x0,-0x560(%rbp)
+   c21e1:	movq   $0x0,-0x558(%rbp)
+   c21ec:	mov    %ebx,%r12d
+   c21ef:	movl   $0x0,-0x550(%rbp)
+   c21f9:	movq   $0x0,-0x548(%rbp)
+   c2204:	movl   $0x0,-0x540(%rbp)
+   c220e:	movq   $0x0,-0x538(%rbp)
+   c2219:	movl   $0x0,-0x530(%rbp)
+   c2223:	movq   $0x0,-0x528(%rbp)
+   c222e:	movq   $0x0,-0x520(%rbp)
+   c2239:	movq   $0x0,-0x518(%rbp)
+   c2244:	movq   $0x0,-0x510(%rbp)
+   c224f:	movq   $0x0,-0x508(%rbp)
+   c225a:	movq   $0x0,-0x500(%rbp)
+   c2265:	je     c2830 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6e0>
+   c226b:	mov    %ebx,-0x590(%rbp)
+   c2271:	mov    %ebx,-0x58c(%rbp)
+   c2277:	mov    %ebx,%ebx
+   c2279:	shl    $0x3,%rbx
+   c227d:	mov    %rbx,%rdi
+   c2280:	callq  28640 <operator new[](unsigned long)@plt>
+   c2285:	mov    %r12d,%edi
+   c2288:	mov    %rax,%r15
+   c228b:	mov    %rax,-0x588(%rbp)
+   c2292:	imul   %r12d,%edi
+   c2296:	shl    $0x3,%rdi
+   c229a:	callq  28640 <operator new[](unsigned long)@plt>
+   c229f:	cmp    $0x1,%r12d
+   c22a3:	mov    %rax,(%r15)
+   c22a6:	je     c22d7 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x187>
+   c22a8:	mov    -0x588(%rbp),%rcx
+   c22af:	lea    -0x2(%r12),%esi
+   c22b4:	mov    (%rcx),%rdx
+   c22b7:	lea    0x8(%rcx),%rax
+   c22bb:	lea    0x10(%rcx,%rsi,8),%rcx
+   c22c0:	add    %rbx,%rdx
+   c22c3:	nopl   0x0(%rax,%rax,1)
+   c22c8:	mov    %rdx,(%rax)
+   c22cb:	add    $0x8,%rax
+   c22cf:	add    %rbx,%rdx
+   c22d2:	cmp    %rax,%rcx
+   c22d5:	jne    c22c8 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x178>
+   c22d7:	mov    -0x598(%rbp),%rax
+   c22de:	mov    0x8(%rax),%rbx
+   c22e2:	cmp    -0x580(%rbp),%ebx
+   c22e8:	mov    %ebx,%r15d
+   c22eb:	je     c3f56 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e06>
+   c22f1:	mov    -0x578(%rbp),%rax
+   c22f8:	test   %rax,%rax
+   c22fb:	je     c231e <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1ce>
+   c22fd:	mov    (%rax),%rdi
+   c2300:	test   %rdi,%rdi
+   c2303:	je     c2820 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6d0>
+   c2309:	callq  29ed0 <operator delete[](void*)@plt>
+   c230e:	mov    -0x578(%rbp),%rax
+   c2315:	test   %rax,%rax
+   c2318:	jne    c2820 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6d0>
+   c231e:	mov    %ebx,%ebx
+   c2320:	mov    %r15d,-0x580(%rbp)
+   c2327:	movl   $0x0,-0x57c(%rbp)
+   c2331:	lea    0x0(,%rbx,8),%rdi
+   c2339:	callq  28640 <operator new[](unsigned long)@plt>
+   c233e:	xor    %edi,%edi
+   c2340:	mov    %rax,%rbx
+   c2343:	mov    %rax,-0x578(%rbp)
+   c234a:	callq  28640 <operator new[](unsigned long)@plt>
+   c234f:	mov    %rax,(%rbx)
+   c2352:	mov    -0x598(%rbp),%rax
+   c2359:	cmp    $0x1,%r15d
+   c235d:	mov    0x8(%rax),%rbx
+   c2361:	mov    %ebx,%r12d
+   c2364:	jbe    c238c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x23c>
+   c2366:	mov    -0x578(%rbp),%rdx
+   c236d:	lea    -0x2(%r15),%esi
+   c2371:	mov    (%rdx),%rcx
+   c2374:	lea    0x8(%rdx),%rax
+   c2378:	lea    0x10(%rdx,%rsi,8),%rdx
+   c237d:	nopl   (%rax)
+   c2380:	mov    %rcx,(%rax)
+   c2383:	add    $0x8,%rax
+   c2387:	cmp    %rax,%rdx
+   c238a:	jne    c2380 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x230>
+   c238c:	mov    -0x570(%rbp),%r15d
+   c2393:	cmp    %r12d,%r15d
+   c2396:	je     c2837 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6e7>
+   c239c:	mov    -0x568(%rbp),%rax
+   c23a3:	test   %rax,%rax
+   c23a6:	je     c23c9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x279>
+   c23a8:	mov    (%rax),%rdi
+   c23ab:	test   %rdi,%rdi
+   c23ae:	je     c2810 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6c0>
+   c23b4:	callq  29ed0 <operator delete[](void*)@plt>
+   c23b9:	mov    -0x568(%rbp),%rax
+   c23c0:	test   %rax,%rax
+   c23c3:	jne    c2810 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6c0>
+   c23c9:	mov    %ebx,%ebx
+   c23cb:	mov    %r12d,-0x570(%rbp)
+   c23d2:	movl   $0x18,-0x56c(%rbp)
+   c23dc:	lea    0x0(,%rbx,8),%rdi
+   c23e4:	callq  28640 <operator new[](unsigned long)@plt>
+   c23e9:	lea    (%r12,%r12,2),%edi
+   c23ed:	mov    %rax,%rbx
+   c23f0:	mov    %rax,-0x568(%rbp)
+   c23f7:	shl    $0x3,%edi
+   c23fa:	shl    $0x3,%rdi
+   c23fe:	callq  28640 <operator new[](unsigned long)@plt>
+   c2403:	mov    %rax,(%rbx)
+   c2406:	mov    -0x598(%rbp),%rax
+   c240d:	cmp    $0x1,%r12d
+   c2411:	mov    0x8(%rax),%rbx
+   c2415:	mov    %ebx,%r15d
+   c2418:	jbe    c245a <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x30a>
+   c241a:	mov    -0x568(%rbp),%rdx
+   c2421:	lea    -0x2(%r12),%ecx
+   c2426:	lea    (%rcx,%rcx,2),%rcx
+   c242a:	mov    (%rdx),%rsi
+   c242d:	add    $0x8,%rdx
+   c2431:	shl    $0x6,%rcx
+   c2435:	lea    0xc0(%rsi),%rax
+   c243c:	lea    0x180(%rsi,%rcx,1),%rcx
+   c2444:	nopl   0x0(%rax)
+   c2448:	mov    %rax,(%rdx)
+   c244b:	add    $0xc0,%rax
+   c2451:	add    $0x8,%rdx
+   c2455:	cmp    %rcx,%rax
+   c2458:	jne    c2448 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x2f8>
+   c245a:	cmp    %r15d,-0x560(%rbp)
+   c2461:	je     c2491 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x341>
+   c2463:	mov    -0x558(%rbp),%rdi
+   c246a:	test   %rdi,%rdi
+   c246d:	je     c2474 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x324>
+   c246f:	callq  29ed0 <operator delete[](void*)@plt>
+   c2474:	mov    %ebx,%ebx
+   c2476:	lea    0x0(,%rbx,8),%rdi
+   c247e:	callq  28640 <operator new[](unsigned long)@plt>
+   c2483:	mov    %rax,-0x558(%rbp)
+   c248a:	mov    %r15d,-0x560(%rbp)
+   c2491:	mov    -0x550(%rbp),%ecx
+   c2497:	test   %ecx,%ecx
+   c2499:	jne    c2850 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x700>
+   c249f:	cmpl   $0x18,-0x540(%rbp)
+   c24a6:	je     c24d4 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x384>
+   c24a8:	mov    -0x538(%rbp),%rdi
+   c24af:	test   %rdi,%rdi
+   c24b2:	je     c24b9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x369>
+   c24b4:	callq  29ed0 <operator delete[](void*)@plt>
+   c24b9:	mov    $0xc0,%edi
+   c24be:	callq  28640 <operator new[](unsigned long)@plt>
+   c24c3:	mov    %rax,-0x538(%rbp)
+   c24ca:	movl   $0x18,-0x540(%rbp)
+   c24d4:	mov    -0x598(%rbp),%rax
+   c24db:	mov    0x8(%rax),%rsi
+   c24df:	cmp    -0x530(%rbp),%esi
+   c24e5:	mov    %esi,%ebx
+   c24e7:	je     c252f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x3df>
+   c24e9:	mov    -0x528(%rbp),%rdi
+   c24f0:	test   %rdi,%rdi
+   c24f3:	je     c2508 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x3b8>
+   c24f5:	mov    %rsi,-0x5b0(%rbp)
+   c24fc:	callq  29ed0 <operator delete[](void*)@plt>
+   c2501:	mov    -0x5b0(%rbp),%rsi
+   c2508:	mov    %esi,%esi
+   c250a:	lea    0x0(,%rsi,8),%rdi
+   c2512:	callq  28640 <operator new[](unsigned long)@plt>
+   c2517:	mov    %rax,-0x528(%rbp)
+   c251e:	mov    -0x598(%rbp),%rax
+   c2525:	mov    %ebx,-0x530(%rbp)
+   c252b:	mov    0x8(%rax),%rsi
+   c252f:	lea    -0x510(%rbp),%r12
+   c2536:	mov    $0x18,%edx
+   c253b:	mov    %r12,%rdi
+   c253e:	callq  2a5d0 <Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1, 0, -1, -1> >::resize(long, long)@plt>
+   c2543:	cmpq   $0x18,-0x518(%rbp)
+   c254b:	je     c2800 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x6b0>
+   c2551:	mov    $0x18,%edi
+   c2556:	callq  28a10 <double* Eigen::internal::conditional_aligned_new_auto<double, true>(unsigned long)@plt>
+   c255b:	mov    %rax,%rbx
+   c255e:	mov    %rax,-0x520(%rbp)
+   c2565:	mov    -0x508(%rbp),%rdx
+   c256c:	movq   $0x18,-0x518(%rbp)
+   c2577:	mov    -0x500(%rbp),%r15
+   c257e:	test   %rdx,%rdx
+   c2581:	js     c3f25 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1dd5>
+   c2587:	test   %r15,%r15
+   c258a:	js     c3f25 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1dd5>
+   c2590:	imul   %rdx,%r15
+   c2594:	mov    -0x510(%rbp),%rcx
+   c259b:	mov    %r15,%r8
+   c259e:	sar    %r8
+   c25a1:	lea    (%r8,%r8,1),%r9
+   c25a5:	test   %r9,%r9
+   c25a8:	jle    c25db <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x48b>
+   c25aa:	lea    0x0(,%r9,8),%rdx
+   c25b2:	mov    %rcx,%rdi
+   c25b5:	xor    %esi,%esi
+   c25b7:	mov    %r8,-0x5b8(%rbp)
+   c25be:	mov    %r9,-0x5b0(%rbp)
+   c25c5:	callq  29060 <memset@plt>
+   c25ca:	mov    -0x5b0(%rbp),%r9
+   c25d1:	mov    -0x5b8(%rbp),%r8
+   c25d8:	mov    %rax,%rcx
+   c25db:	cmp    %r9,%r15
+   c25de:	jle    c25fa <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x4aa>
+   c25e0:	sub    %r9,%r15
+   c25e3:	shl    $0x4,%r8
+   c25e7:	xor    %esi,%esi
+   c25e9:	lea    0x0(,%r15,8),%rdx
+   c25f1:	lea    (%rcx,%r8,1),%rdi
+   c25f5:	callq  29060 <memset@plt>
+   c25fa:	lea    0x8(%rbx),%rdi
+   c25fe:	movq   $0x0,(%rbx)
+   c2605:	movq   $0x0,0xb8(%rbx)
+   c2610:	xor    %eax,%eax
+   c2612:	and    $0xfffffffffffffff8,%rdi
+   c2616:	sub    %rdi,%rbx
+   c2619:	lea    0xc0(%rbx),%ecx
+   c261f:	lea    -0x160(%rbp),%rbx
+   c2626:	shr    $0x3,%ecx
+   c2629:	rep stos %rax,%es:(%rdi)
+   c262c:	lea    -0x310(%rbp),%rax
+   c2633:	mov    %rbx,%rdi
+   c2636:	mov    -0x598(%rbp),%rsi
+   c263d:	mov    %rax,%rdx
+   c2640:	mov    %rax,-0x5b0(%rbp)
+   c2647:	movdqa 0x0(%r13),%xmm0
+   c264d:	movaps %xmm0,-0x310(%rbp)
+   c2654:	movdqa 0x10(%r13),%xmm0
+   c265a:	movaps %xmm0,-0x300(%rbp)
+   c2661:	movdqa 0x20(%r13),%xmm0
+   c2667:	movaps %xmm0,-0x2f0(%rbp)
+   c266e:	callq  28f60 <ArmModel::CalcJacobianSpace(Eigen::Matrix<double, 6, 1, 0, 6, 1>)@plt>
+   c2673:	mov    $0x120,%edi
+   c2678:	movq   $0x0,-0x4f0(%rbp)
+   c2683:	movq   $0x0,-0x4e8(%rbp)
+   c268e:	movq   $0x0,-0x4e0(%rbp)
+   c2699:	callq  2a010 <malloc@plt>
+   c269e:	test   $0xf,%al
+   c26a0:	jne    c2bb8 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa68>
+   c26a6:	test   %rax,%rax
+   c26a9:	je     c3f20 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1dd0>
+   c26af:	mov    %rax,%rdi
+   c26b2:	mov    %rax,-0x4f0(%rbp)
+   c26b9:	mov    -0x598(%rbp),%rax
+   c26c0:	mov    $0x24,%ecx
+   c26c5:	mov    %rbx,%rsi
+   c26c8:	movq   $0x6,-0x4e8(%rbp)
+   c26d3:	movq   $0x6,-0x4e0(%rbp)
+   c26de:	mov    0x8(%rax),%rax
+   c26e2:	rep movsq %ds:(%rsi),%es:(%rdi)
+   c26e5:	test   %rax,%rax
+   c26e8:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c26ee:	mov    -0x598(%rbp),%rsi
+   c26f5:	cmp    $0x1,%rax
+   c26f9:	mov    0x240(%rsi),%rcx
+   c2700:	mov    0x228(%rsi),%rdx
+   c2707:	movsd  (%rcx),%xmm0
+   c270b:	movsd  %xmm0,-0x3a0(%rbp)
+   c2713:	movsd  (%rdx),%xmm0
+   c2717:	movsd  %xmm0,-0x370(%rbp)
+   c271f:	jbe    c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c2725:	movsd  0x8(%rcx),%xmm0
+   c272a:	cmp    $0x2,%rax
+   c272e:	movsd  %xmm0,-0x398(%rbp)
+   c2736:	movsd  0x8(%rdx),%xmm0
+   c273b:	movsd  %xmm0,-0x368(%rbp)
+   c2743:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c2749:	movsd  0x10(%rcx),%xmm0
+   c274e:	cmp    $0x3,%rax
+   c2752:	movsd  %xmm0,-0x390(%rbp)
+   c275a:	movsd  0x10(%rdx),%xmm0
+   c275f:	movsd  %xmm0,-0x360(%rbp)
+   c2767:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c276d:	movsd  0x18(%rcx),%xmm0
+   c2772:	cmp    $0x4,%rax
+   c2776:	movsd  %xmm0,-0x388(%rbp)
+   c277e:	movsd  0x18(%rdx),%xmm0
+   c2783:	movsd  %xmm0,-0x358(%rbp)
+   c278b:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c2791:	movsd  0x20(%rcx),%xmm0
+   c2796:	cmp    $0x5,%rax
+   c279a:	movsd  %xmm0,-0x380(%rbp)
+   c27a2:	movsd  0x20(%rdx),%xmm0
+   c27a7:	movsd  %xmm0,-0x350(%rbp)
+   c27af:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c27b5:	movsd  0x28(%rcx),%xmm0
+   c27ba:	cmp    $0x6,%rax
+   c27be:	movsd  %xmm0,-0x378(%rbp)
+   c27c6:	movsd  0x28(%rdx),%xmm0
+   c27cb:	movsd  %xmm0,-0x348(%rbp)
+   c27d3:	je     c2880 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x730>
+   c27d9:	lea    0x5bc60(%rip),%rcx        # 11e440 <Eigen::DenseCoeffsBase<Eigen::Matrix<double, 6, 1, 0, 6, 1>, 1>::operator[](long)::__PRETTY_FUNCTION__>
+   c27e0:	lea    0x1a1a9(%rip),%rsi        # dc990 <typeinfo name for FSMState+0xb0>
+   c27e7:	lea    0x1a171(%rip),%rdi        # dc95f <typeinfo name for FSMState+0x7f>
+   c27ee:	mov    $0x198,%edx
+   c27f3:	callq  292e0 <__assert_fail@plt>
+   c27f8:	nopl   0x0(%rax,%rax,1)
+   c2800:	xor    %ebx,%ebx
+   c2802:	jmpq   c2565 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x415>
+   c2807:	nopw   0x0(%rax,%rax,1)
+   c2810:	mov    %rax,%rdi
+   c2813:	callq  29ed0 <operator delete[](void*)@plt>
+   c2818:	jmpq   c23c9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x279>
+   c281d:	nopl   (%rax)
+   c2820:	mov    %rax,%rdi
+   c2823:	callq  29ed0 <operator delete[](void*)@plt>
+   c2828:	jmpq   c231e <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1ce>
+   c282d:	nopl   (%rax)
+   c2830:	mov    -0x570(%rbp),%r15d
+   c2837:	cmpl   $0x18,-0x56c(%rbp)
+   c283e:	jne    c239c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x24c>
+   c2844:	jmpq   c245a <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x30a>
+   c2849:	nopl   0x0(%rax)
+   c2850:	mov    -0x548(%rbp),%rdi
+   c2857:	test   %rdi,%rdi
+   c285a:	je     c2861 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x711>
+   c285c:	callq  29ed0 <operator delete[](void*)@plt>
+   c2861:	xor    %edi,%edi
+   c2863:	callq  28640 <operator new[](unsigned long)@plt>
+   c2868:	mov    %rax,-0x548(%rbp)
+   c286f:	movl   $0x0,-0x550(%rbp)
+   c2879:	jmpq   c249f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x34f>
+   c287e:	xchg   %ax,%ax
+   c2880:	mov    0x1a069(%rip),%rax        # dc8f0 <typeinfo name for FSMState+0x10>
+   c2887:	lea    -0x450(%rbp),%rdx
+   c288e:	lea    -0x280(%rbp),%rdi
+   c2895:	movq   $0x6,-0x408(%rbp)
+   c28a0:	movq   $0x6,-0x400(%rbp)
+   c28ab:	mov    %rdx,-0x5c0(%rbp)
+   c28b2:	mov    %rax,-0x3f8(%rbp)
+   c28b9:	lea    -0x4f0(%rbp),%rax
+   c28c0:	mov    %rax,-0x5b8(%rbp)
+   c28c7:	mov    %rax,-0x3f0(%rbp)
+   c28ce:	mov    %rax,-0x3e8(%rbp)
+   c28d5:	lea    -0x410(%rbp),%rax
+   c28dc:	mov    %rax,%rsi
+   c28df:	mov    %rax,-0x5c8(%rbp)
+   c28e6:	callq  c1660 <void Eigen::internal::call_assignment<Eigen::Matrix<double, 6, 6, 0, 6, 6>, Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, -1, -1, 0, -1, -1> const> const, Eigen::Product<Eigen::Transpose<Eigen::Matrix<double, -1, -1, 0, -1, -1> >, Eigen::Matrix<double, -1, -1, 0, -1, -1>, 0> const>, Eigen::internal::assign_op<double, double> >(Eigen::Matrix<double, 6, 6, 0, 6, 6>&, Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, -1, -1, 0, -1, -1> const> const, Eigen::Product<Eigen::Transpose<Eigen::Matrix<double, -1, -1, 0, -1, -1> >, Eigen::Matrix<double, -1, -1, 0, -1, -1>, 0> const> const&, Eigen::internal::assign_op<double, double> const&, Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, -1, -1, 0, -1, -1> const> const, Eigen::Product<Eigen::Transpose<Eigen::Matrix<double, -1, -1, 0, -1, -1> >, Eigen::Matrix<double, -1, -1, 0, -1, -1>, 0> const>, Eigen::internal::evaluator_traits<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, -1, -1, 0, -1, -1> const> const, Eigen::Product<Eigen::Transpose<Eigen::Matrix<double, -1, -1, 0, -1, -1> >, Eigen::Matrix<double, -1, -1, 0, -1, -1>, 0> const> >::Shape>::value, void*>::type) [clone .isra.2053]>
+   c28eb:	cmpq   $0x6,-0x4e8(%rbp)
+   c28f3:	jne    c3fa1 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e51>
+   c28f9:	mov    -0x4e0(%rbp),%rsi
+   c2900:	test   %rsi,%rsi
+   c2903:	js     c3fc0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e70>
+   c2909:	je     c2965 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x815>
+   c290b:	movabs $0x1fffffffffffffff,%rax
+   c2915:	cmp    %rax,%rsi
+   c2918:	jg     c3f9c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e4c>
+   c291e:	lea    0x0(,%rsi,8),%rdx
+   c2926:	mov    %rsi,-0x5f0(%rbp)
+   c292d:	mov    %rdx,%rdi
+   c2930:	mov    %rdx,-0x5e0(%rbp)
+   c2937:	callq  2a010 <malloc@plt>
+   c293c:	mov    -0x5e0(%rbp),%rdx
+   c2943:	mov    %rax,%r15
+   c2946:	mov    -0x5f0(%rbp),%rsi
+   c294d:	cmp    $0xf,%rdx
+   c2951:	ja     c2bb0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa60>
+   c2957:	test   %r15,%r15
+   c295a:	je     c3f97 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e47>
+   c2960:	mov    %rsi,%rcx
+   c2963:	jmp    c296a <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x81a>
+   c2965:	xor    %ecx,%ecx
+   c2967:	xor    %r15d,%r15d
+   c296a:	movapd 0x5e83e(%rip),%xmm2        # 1211b0 <typeinfo name for Z1Model+0x690>
+   c2972:	cmp    %rcx,%rsi
+   c2975:	mov    -0x5b8(%rbp),%rax
+   c297c:	movapd (%r14),%xmm3
+   c2981:	movapd 0x10(%r14),%xmm4
+   c2987:	mulpd  %xmm2,%xmm3
+   c298b:	mov    %rax,-0x2b0(%rbp)
+   c2992:	lea    -0x2e0(%rbp),%rax
+   c2999:	movdqa 0x1f81f(%rip),%xmm0        # e21c0 <typeinfo name for State_Cartesian+0x90>
+   c29a1:	mulpd  %xmm2,%xmm4
+   c29a5:	mov    %rax,-0x2a8(%rbp)
+   c29ac:	movaps %xmm0,-0x290(%rbp)
+   c29b3:	mulpd  0x20(%r14),%xmm2
+   c29b9:	movaps %xmm3,-0x2e0(%rbp)
+   c29c0:	movaps %xmm4,-0x2d0(%rbp)
+   c29c7:	mov    -0x4f0(%rbp),%r14
+   c29ce:	movaps %xmm2,-0x2c0(%rbp)
+   c29d5:	mov    %r14,-0x298(%rbp)
+   c29dc:	je     c2ad1 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x981>
+   c29e2:	test   %rsi,%rsi
+   c29e5:	je     c2b9f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa4f>
+   c29eb:	movabs $0x7fffffffffffffff,%rax
+   c29f5:	cqto   
+   c29f7:	idiv   %rsi
+   c29fa:	test   %rax,%rax
+   c29fd:	jle    c3f8d <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e3d>
+   c2a03:	mov    %r15,%rdi
+   c2a06:	mov    %rsi,-0x5b8(%rbp)
+   c2a0d:	movaps %xmm2,-0x600(%rbp)
+   c2a14:	movaps %xmm4,-0x5f0(%rbp)
+   c2a1b:	movaps %xmm3,-0x5e0(%rbp)
+   c2a22:	callq  29d30 <free@plt>
+   c2a27:	movabs $0x1fffffffffffffff,%rax
+   c2a31:	mov    -0x5b8(%rbp),%rsi
+   c2a38:	movapd -0x5e0(%rbp),%xmm3
+   c2a40:	cmp    %rax,%rsi
+   c2a43:	movapd -0x5f0(%rbp),%xmm4
+   c2a4b:	movapd -0x600(%rbp),%xmm2
+   c2a53:	ja     c3f88 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e38>
+   c2a59:	lea    0x0(,%rsi,8),%rdx
+   c2a61:	mov    %rsi,-0x5e0(%rbp)
+   c2a68:	movaps %xmm2,-0x610(%rbp)
+   c2a6f:	mov    %rdx,%rdi
+   c2a72:	mov    %rdx,-0x5b8(%rbp)
+   c2a79:	movaps %xmm4,-0x600(%rbp)
+   c2a80:	movaps %xmm3,-0x5f0(%rbp)
+   c2a87:	callq  2a010 <malloc@plt>
+   c2a8c:	mov    -0x5b8(%rbp),%rdx
+   c2a93:	mov    -0x5e0(%rbp),%rsi
+   c2a9a:	movapd -0x5f0(%rbp),%xmm3
+   c2aa2:	cmp    $0xf,%rdx
+   c2aa6:	movapd -0x600(%rbp),%xmm4
+   c2aae:	movapd -0x610(%rbp),%xmm2
+   c2ab6:	jbe    c2ac0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x970>
+   c2ab8:	test   $0xf,%al
+   c2aba:	jne    c2bb8 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa68>
+   c2ac0:	test   %rax,%rax
+   c2ac3:	je     c3f92 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1e42>
+   c2ac9:	mov    %rax,%r15
+   c2acc:	mov    %rsi,%rcx
+   c2acf:	jmp    c2ada <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x98a>
+   c2ad1:	test   %rcx,%rcx
+   c2ad4:	je     c2ba7 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa57>
+   c2ada:	mov    %r14,%rax
+   c2add:	xor    %edx,%edx
+   c2adf:	nop
+   c2ae0:	movupd 0x20(%rax),%xmm0
+   c2ae5:	add    $0x30,%rax
+   c2ae9:	movupd -0x20(%rax),%xmm1
+   c2aee:	mulpd  %xmm2,%xmm0
+   c2af2:	mulpd  %xmm4,%xmm1
+   c2af6:	addpd  %xmm1,%xmm0
+   c2afa:	movupd -0x30(%rax),%xmm1
+   c2aff:	mulpd  %xmm3,%xmm1
+   c2b03:	addpd  %xmm1,%xmm0
+   c2b07:	movapd %xmm0,%xmm1
+   c2b0b:	unpckhpd %xmm0,%xmm1
+   c2b0f:	addsd  %xmm1,%xmm0
+   c2b13:	movlpd %xmm0,(%r15,%rdx,8)
+   c2b19:	add    $0x1,%rdx
+   c2b1d:	cmp    %rcx,%rdx
+   c2b20:	jne    c2ae0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x990>
+   c2b22:	cmp    $0x6,%rdx
+   c2b26:	jne    c2ba7 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa57>
+   c2b28:	movapd (%r15),%xmm0
+   c2b2d:	mov    %r15,%rdi
+   c2b30:	movaps %xmm0,-0x3d0(%rbp)
+   c2b37:	movapd 0x10(%r15),%xmm0
+   c2b3d:	movaps %xmm0,-0x3c0(%rbp)
+   c2b44:	movapd 0x20(%r15),%xmm0
+   c2b4a:	movaps %xmm0,-0x3b0(%rbp)
+   c2b51:	callq  29d30 <free@plt>
+   c2b56:	lea    -0x4d0(%rbp),%rdi
+   c2b5d:	xor    %ecx,%ecx
+   c2b5f:	xor    %edx,%edx
+   c2b61:	mov    $0x6,%r9d
+   c2b67:	mov    $0x6,%r8d
+   c2b6d:	mov    %r12,%rsi
+   c2b70:	callq  29800 <Eigen::Block<Eigen::Matrix<double, -1, -1, 0, -1, -1>, -1, -1, false>::Block(Eigen::Matrix<double, -1, -1, 0, -1, -1>&, long, long, long, long)@plt>
+   c2b75:	cmpq   $0x6,-0x4c8(%rbp)
+   c2b7d:	je     c2be0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa90>
+   c2b7f:	nop
+   c2b80:	lea    0x5b1f9(%rip),%rcx        # 11dd80 <Eigen::DenseBase<Eigen::Block<Eigen::Matrix<double, -1, -1, 0, -1, -1>, -1, -1, false> >::resize(long, long)::__PRETTY_FUNCTION__>
+   c2b87:	lea    0x53b0a(%rip),%rsi        # 116698 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0x298>
+   c2b8e:	lea    0x53b33(%rip),%rdi        # 1166c8 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0x2c8>
+   c2b95:	mov    $0x101,%edx
+   c2b9a:	callq  292e0 <__assert_fail@plt>
+   c2b9f:	mov    %r15,%rdi
+   c2ba2:	callq  29d30 <free@plt>
+   c2ba7:	callq  2b1d8 <Eigen::PlainObjectBase<Eigen::Matrix<double, 6, 1, 0, 6, 1> >::resize(long, long) [clone .isra.521] [clone .part.522]>
+   c2bac:	nopl   0x0(%rax)
+   c2bb0:	test   $0xf,%al
+   c2bb2:	je     c2957 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x807>
+   c2bb8:	lea    0x5d981(%rip),%rcx        # 120540 <Eigen::internal::aligned_malloc(unsigned long)::__PRETTY_FUNCTION__>
+   c2bbf:	lea    0x19ad2(%rip),%rsi        # dc698 <_fini+0x164>
+   c2bc6:	lea    0x19b03(%rip),%rdi        # dc6d0 <_fini+0x19c>
+   c2bcd:	mov    $0xa1,%edx
+   c2bd2:	callq  292e0 <__assert_fail@plt>
+   c2bd7:	nopw   0x0(%rax,%rax,1)
+   c2be0:	cmpq   $0x6,-0x4c0(%rbp)
+   c2be8:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c2bea:	mov    -0x4a0(%rbp),%rcx
+   c2bf1:	pxor   %xmm0,%xmm0
+   c2bf5:	movsd  -0x5a0(%rbp),%xmm5
+   c2bfd:	mov    -0x4d0(%rbp),%rax
+   c2c04:	mov    $0x6,%r9d
+   c2c0a:	mov    $0x6,%r8d
+   c2c10:	mulsd  %xmm5,%xmm0
+   c2c14:	lea    0x1(%rcx),%rsi
+   c2c18:	movsd  %xmm5,(%rax)
+   c2c1c:	movapd %xmm5,%xmm1
+   c2c20:	lea    0x0(,%rsi,8),%rdx
+   c2c28:	movsd  %xmm0,0x8(%rax)
+   c2c2d:	movsd  %xmm0,0x10(%rax)
+   c2c32:	movsd  %xmm0,0x18(%rax)
+   c2c37:	movsd  %xmm0,0x20(%rax)
+   c2c3c:	movsd  %xmm0,0x28(%rax)
+   c2c41:	movsd  %xmm0,(%rax,%rcx,8)
+   c2c46:	movsd  %xmm5,(%rax,%rsi,8)
+   c2c4b:	movsd  %xmm0,0x8(%rax,%rdx,1)
+   c2c51:	movsd  %xmm0,0x10(%rax,%rdx,1)
+   c2c57:	movsd  %xmm0,0x18(%rax,%rdx,1)
+   c2c5d:	movsd  %xmm0,0x20(%rax,%rdx,1)
+   c2c63:	lea    (%rcx,%rcx,1),%rdx
+   c2c67:	lea    0x1(%rdx),%rdi
+   c2c6b:	movsd  %xmm0,(%rax,%rdx,8)
+   c2c70:	add    %rcx,%rdx
+   c2c73:	lea    0x0(,%rdi,8),%rsi
+   c2c7b:	movsd  %xmm0,(%rax,%rdi,8)
+   c2c80:	lea    0x1(%rdx),%rdi
+   c2c84:	movsd  %xmm5,0x8(%rax,%rsi,1)
+   c2c8a:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c2c90:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c2c96:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2c9c:	lea    0x0(,%rdi,8),%rsi
+   c2ca4:	movsd  %xmm0,(%rax,%rdx,8)
+   c2ca9:	add    %rcx,%rdx
+   c2cac:	movsd  %xmm0,(%rax,%rdi,8)
+   c2cb1:	lea    0x1(%rdx),%rdi
+   c2cb5:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c2cbb:	movsd  %xmm5,0x10(%rax,%rsi,1)
+   c2cc1:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c2cc7:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2ccd:	lea    0x0(,%rdi,8),%rsi
+   c2cd5:	movsd  %xmm0,(%rax,%rdx,8)
+   c2cda:	add    %rcx,%rdx
+   c2cdd:	movsd  %xmm0,(%rax,%rdi,8)
+   c2ce2:	lea    -0x490(%rbp),%rdi
+   c2ce9:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c2cef:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c2cf5:	movsd  %xmm5,0x18(%rax,%rsi,1)
+   c2cfb:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2d01:	mov    %r12,%rsi
+   c2d04:	movsd  %xmm0,(%rax,%rdx,8)
+   c2d09:	add    $0x1,%rdx
+   c2d0d:	lea    0x0(,%rdx,8),%rcx
+   c2d15:	movsd  %xmm0,(%rax,%rdx,8)
+   c2d1a:	xor    %edx,%edx
+   c2d1c:	movsd  %xmm0,0x8(%rax,%rcx,1)
+   c2d22:	xorpd  0x1a0e6(%rip),%xmm1        # dce10 <typeinfo name for State_BackToStart+0x20>
+   c2d2a:	movsd  %xmm0,0x10(%rax,%rcx,1)
+   c2d30:	movsd  %xmm0,0x18(%rax,%rcx,1)
+   c2d36:	movsd  %xmm5,0x20(%rax,%rcx,1)
+   c2d3c:	mov    $0x6,%ecx
+   c2d41:	movsd  %xmm1,-0x5a0(%rbp)
+   c2d49:	callq  29800 <Eigen::Block<Eigen::Matrix<double, -1, -1, 0, -1, -1>, -1, -1, false>::Block(Eigen::Matrix<double, -1, -1, 0, -1, -1>&, long, long, long, long)@plt>
+   c2d4e:	cmpq   $0x6,-0x488(%rbp)
+   c2d56:	movsd  -0x5a0(%rbp),%xmm1
+   c2d5e:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c2d64:	cmpq   $0x6,-0x480(%rbp)
+   c2d6c:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c2d72:	mov    -0x460(%rbp),%rcx
+   c2d79:	pxor   %xmm0,%xmm0
+   c2d7d:	mov    -0x490(%rbp),%rax
+   c2d84:	mov    $0x6,%r9d
+   c2d8a:	mov    $0x6,%r8d
+   c2d90:	mulsd  %xmm1,%xmm0
+   c2d94:	lea    0x1(%rcx),%rsi
+   c2d98:	movsd  %xmm1,(%rax)
+   c2d9c:	lea    0x0(,%rsi,8),%rdx
+   c2da4:	movsd  %xmm0,0x8(%rax)
+   c2da9:	movsd  %xmm0,0x10(%rax)
+   c2dae:	movsd  %xmm0,0x18(%rax)
+   c2db3:	movsd  %xmm0,0x20(%rax)
+   c2db8:	movsd  %xmm0,0x28(%rax)
+   c2dbd:	movsd  %xmm0,(%rax,%rcx,8)
+   c2dc2:	movsd  %xmm1,(%rax,%rsi,8)
+   c2dc7:	movsd  %xmm0,0x8(%rax,%rdx,1)
+   c2dcd:	movsd  %xmm0,0x10(%rax,%rdx,1)
+   c2dd3:	movsd  %xmm0,0x18(%rax,%rdx,1)
+   c2dd9:	movsd  %xmm0,0x20(%rax,%rdx,1)
+   c2ddf:	lea    (%rcx,%rcx,1),%rdx
+   c2de3:	lea    0x1(%rdx),%rdi
+   c2de7:	movsd  %xmm0,(%rax,%rdx,8)
+   c2dec:	add    %rcx,%rdx
+   c2def:	lea    0x0(,%rdi,8),%rsi
+   c2df7:	movsd  %xmm0,(%rax,%rdi,8)
+   c2dfc:	lea    0x1(%rdx),%rdi
+   c2e00:	movsd  %xmm1,0x8(%rax,%rsi,1)
+   c2e06:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c2e0c:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c2e12:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2e18:	lea    0x0(,%rdi,8),%rsi
+   c2e20:	movsd  %xmm0,(%rax,%rdx,8)
+   c2e25:	add    %rcx,%rdx
+   c2e28:	movsd  %xmm0,(%rax,%rdi,8)
+   c2e2d:	lea    0x1(%rdx),%rdi
+   c2e31:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c2e37:	movsd  %xmm1,0x10(%rax,%rsi,1)
+   c2e3d:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c2e43:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2e49:	lea    0x0(,%rdi,8),%rsi
+   c2e51:	movsd  %xmm0,(%rax,%rdx,8)
+   c2e56:	add    %rcx,%rdx
+   c2e59:	movsd  %xmm0,(%rax,%rdi,8)
+   c2e5e:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c2e64:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c2e6a:	movsd  %xmm1,0x18(%rax,%rsi,1)
+   c2e70:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c2e76:	mov    %r12,%rsi
+   c2e79:	movsd  %xmm0,(%rax,%rdx,8)
+   c2e7e:	add    $0x1,%rdx
+   c2e82:	mov    -0x5c0(%rbp),%rdi
+   c2e89:	lea    0x0(,%rdx,8),%rcx
+   c2e91:	movsd  %xmm0,(%rax,%rdx,8)
+   c2e96:	xor    %edx,%edx
+   c2e98:	movsd  %xmm0,0x8(%rax,%rcx,1)
+   c2e9e:	movsd  %xmm0,0x10(%rax,%rcx,1)
+   c2ea4:	movsd  %xmm0,0x18(%rax,%rcx,1)
+   c2eaa:	movsd  %xmm1,0x20(%rax,%rcx,1)
+   c2eb0:	mov    $0xc,%ecx
+   c2eb5:	callq  29800 <Eigen::Block<Eigen::Matrix<double, -1, -1, 0, -1, -1>, -1, -1, false>::Block(Eigen::Matrix<double, -1, -1, 0, -1, -1>&, long, long, long, long)@plt>
+   c2eba:	cmpq   $0x6,-0x448(%rbp)
+   c2ec2:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c2ec8:	cmpq   $0x6,-0x440(%rbp)
+   c2ed0:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c2ed6:	mov    -0x420(%rbp),%rcx
+   c2edd:	mov    -0x450(%rbp),%rax
+   c2ee4:	mov    $0x6,%r9d
+   c2eea:	movsd  0x19a26(%rip),%xmm0        # dc918 <typeinfo name for FSMState+0x38>
+   c2ef2:	mov    $0x6,%r8d
+   c2ef8:	lea    0x1(%rcx),%rsi
+   c2efc:	movsd  %xmm0,(%rax)
+   c2f00:	movq   $0x0,0x8(%rax)
+   c2f08:	movq   $0x0,0x10(%rax)
+   c2f10:	movq   $0x0,0x18(%rax)
+   c2f18:	lea    0x0(,%rsi,8),%rdx
+   c2f20:	movq   $0x0,0x20(%rax)
+   c2f28:	movq   $0x0,0x28(%rax)
+   c2f30:	movq   $0x0,(%rax,%rcx,8)
+   c2f38:	movsd  %xmm0,(%rax,%rsi,8)
+   c2f3d:	movq   $0x0,0x8(%rax,%rdx,1)
+   c2f46:	movq   $0x0,0x10(%rax,%rdx,1)
+   c2f4f:	movq   $0x0,0x18(%rax,%rdx,1)
+   c2f58:	movq   $0x0,0x20(%rax,%rdx,1)
+   c2f61:	lea    (%rcx,%rcx,1),%rdx
+   c2f65:	lea    0x1(%rdx),%rdi
+   c2f69:	movq   $0x0,(%rax,%rdx,8)
+   c2f71:	add    %rcx,%rdx
+   c2f74:	lea    0x0(,%rdi,8),%rsi
+   c2f7c:	movq   $0x0,(%rax,%rdi,8)
+   c2f84:	lea    0x1(%rdx),%rdi
+   c2f88:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c2f8e:	movq   $0x0,0x10(%rax,%rsi,1)
+   c2f97:	movq   $0x0,0x18(%rax,%rsi,1)
+   c2fa0:	movq   $0x0,0x20(%rax,%rsi,1)
+   c2fa9:	movq   $0x0,(%rax,%rdx,8)
+   c2fb1:	add    %rcx,%rdx
+   c2fb4:	movq   $0x0,(%rax,%rdi,8)
+   c2fbc:	lea    0x0(,%rdi,8),%rsi
+   c2fc4:	lea    0x1(%rdx),%rdi
+   c2fc8:	movq   $0x0,0x8(%rax,%rsi,1)
+   c2fd1:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c2fd7:	movq   $0x0,0x18(%rax,%rsi,1)
+   c2fe0:	movq   $0x0,0x20(%rax,%rsi,1)
+   c2fe9:	lea    0x0(,%rdi,8),%rsi
+   c2ff1:	movq   $0x0,(%rax,%rdx,8)
+   c2ff9:	add    %rcx,%rdx
+   c2ffc:	movq   $0x0,(%rax,%rdi,8)
+   c3004:	movq   $0x0,0x8(%rax,%rsi,1)
+   c300d:	movq   $0x0,0x10(%rax,%rsi,1)
+   c3016:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c301c:	movq   $0x0,0x20(%rax,%rsi,1)
+   c3025:	movq   $0x0,(%rax,%rdx,8)
+   c302d:	add    $0x1,%rdx
+   c3031:	lea    0x0(,%rdx,8),%rcx
+   c3039:	mov    -0x5c8(%rbp),%rdi
+   c3040:	mov    %r12,%rsi
+   c3043:	movq   $0x0,(%rax,%rdx,8)
+   c304b:	xor    %edx,%edx
+   c304d:	movsd  %xmm0,0x20(%rax,%rcx,1)
+   c3053:	movq   $0x0,0x8(%rax,%rcx,1)
+   c305c:	movq   $0x0,0x10(%rax,%rcx,1)
+   c3065:	movq   $0x0,0x18(%rax,%rcx,1)
+   c306e:	mov    $0x12,%ecx
+   c3073:	callq  29800 <Eigen::Block<Eigen::Matrix<double, -1, -1, 0, -1, -1>, -1, -1, false>::Block(Eigen::Matrix<double, -1, -1, 0, -1, -1>&, long, long, long, long)@plt>
+   c3078:	cmpq   $0x6,-0x408(%rbp)
+   c3080:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c3086:	cmpq   $0x6,-0x400(%rbp)
+   c308e:	jne    c2b80 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0xa30>
+   c3094:	mov    -0x3e0(%rbp),%rcx
+   c309b:	mov    -0x410(%rbp),%rax
+   c30a2:	movsd  0x53eae(%rip),%xmm0        # 116f58 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0xb58>
+   c30aa:	movsd  0x1f13e(%rip),%xmm1        # e21f0 <typeinfo name for State_Cartesian+0xc0>
+   c30b2:	lea    0x1(%rcx),%rsi
+   c30b6:	movsd  %xmm0,0x8(%rax)
+   c30bb:	movsd  %xmm1,(%rax)
+   c30bf:	lea    0x0(,%rsi,8),%rdx
+   c30c7:	movsd  %xmm0,0x10(%rax)
+   c30cc:	movsd  %xmm0,0x18(%rax)
+   c30d1:	movsd  %xmm0,0x20(%rax)
+   c30d6:	movsd  %xmm0,0x28(%rax)
+   c30db:	movsd  %xmm0,(%rax,%rcx,8)
+   c30e0:	movsd  %xmm1,(%rax,%rsi,8)
+   c30e5:	movsd  %xmm0,0x8(%rax,%rdx,1)
+   c30eb:	movsd  %xmm0,0x10(%rax,%rdx,1)
+   c30f1:	movsd  %xmm0,0x18(%rax,%rdx,1)
+   c30f7:	movsd  %xmm0,0x20(%rax,%rdx,1)
+   c30fd:	lea    (%rcx,%rcx,1),%rdx
+   c3101:	lea    0x1(%rdx),%rdi
+   c3105:	movsd  %xmm0,(%rax,%rdx,8)
+   c310a:	add    %rcx,%rdx
+   c310d:	lea    0x0(,%rdi,8),%rsi
+   c3115:	movsd  %xmm0,(%rax,%rdi,8)
+   c311a:	lea    0x1(%rdx),%rdi
+   c311e:	movsd  %xmm1,0x8(%rax,%rsi,1)
+   c3124:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c312a:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c3130:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c3136:	lea    0x0(,%rdi,8),%rsi
+   c313e:	movsd  %xmm0,(%rax,%rdx,8)
+   c3143:	add    %rcx,%rdx
+   c3146:	movsd  %xmm0,(%rax,%rdi,8)
+   c314b:	lea    0x1(%rdx),%rdi
+   c314f:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c3155:	movsd  %xmm1,0x10(%rax,%rsi,1)
+   c315b:	movsd  %xmm0,0x18(%rax,%rsi,1)
+   c3161:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c3167:	lea    0x0(,%rdi,8),%rsi
+   c316f:	movsd  %xmm0,(%rax,%rdx,8)
+   c3174:	add    %rcx,%rdx
+   c3177:	movsd  %xmm0,(%rax,%rdi,8)
+   c317c:	movsd  %xmm0,0x8(%rax,%rsi,1)
+   c3182:	movsd  %xmm0,0x10(%rax,%rsi,1)
+   c3188:	movsd  %xmm1,0x18(%rax,%rsi,1)
+   c318e:	mov    -0x518(%rbp),%r14
+   c3195:	movsd  %xmm0,0x20(%rax,%rsi,1)
+   c319b:	mov    -0x520(%rbp),%r12
+   c31a2:	movsd  %xmm0,(%rax,%rdx,8)
+   c31a7:	add    $0x1,%rdx
+   c31ab:	lea    0x0(,%rdx,8),%rcx
+   c31b3:	cmp    $0x5,%r14
+   c31b7:	movsd  %xmm0,(%rax,%rdx,8)
+   c31bc:	movsd  %xmm0,0x8(%rax,%rcx,1)
+   c31c2:	movsd  %xmm0,0x10(%rax,%rcx,1)
+   c31c8:	movsd  %xmm0,0x18(%rax,%rcx,1)
+   c31ce:	movsd  %xmm1,0x20(%rax,%rcx,1)
+   c31d4:	jle    c3f01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1db1>
+   c31da:	test   $0x7,%r12b
+   c31de:	jne    c3ac1 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1971>
+   c31e4:	mov    %r12,%rax
+   c31e7:	mov    $0x6,%edx
+   c31ec:	shr    $0x3,%rax
+   c31f0:	and    $0x1,%eax
+   c31f3:	sub    %rax,%rdx
+   c31f6:	and    $0xfffffffffffffffe,%rdx
+   c31fa:	or     %rax,%rdx
+   c31fd:	test   %rax,%rax
+   c3200:	je     c3216 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x10c6>
+   c3202:	movsd  0x0(%r13),%xmm0
+   c3208:	subsd  -0x3a0(%rbp),%xmm0
+   c3210:	movsd  %xmm0,(%r12)
+   c3216:	lea    -0x3a0(%rbp),%rcx
+   c321d:	nopl   (%rax)
+   c3220:	movupd 0x0(%r13,%rax,8),%xmm0
+   c3227:	movupd (%rcx,%rax,8),%xmm6
+   c322c:	subpd  %xmm6,%xmm0
+   c3230:	movaps %xmm0,(%r12,%rax,8)
+   c3235:	add    $0x2,%rax
+   c3239:	cmp    %rax,%rdx
+   c323c:	jg     c3220 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x10d0>
+   c323e:	cmp    $0x5,%rdx
+   c3242:	jg     c327f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x112f>
+   c3244:	lea    0x0(,%rdx,8),%rax
+   c324c:	movsd  0x0(%r13,%rdx,8),%xmm0
+   c3253:	cmp    $0x5,%rdx
+   c3257:	subsd  -0x3a0(%rbp,%rax,1),%xmm0
+   c3260:	movsd  %xmm0,(%r12,%rdx,8)
+   c3266:	je     c327f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x112f>
+   c3268:	movsd  0x8(%r13,%rax,1),%xmm0
+   c326f:	subsd  -0x398(%rbp,%rax,1),%xmm0
+   c3278:	movsd  %xmm0,0x8(%r12,%rax,1)
+   c327f:	cmp    $0xb,%r14
+   c3283:	lea    0x30(%r12),%rax
+   c3288:	jle    c3f01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1db1>
+   c328e:	test   $0x7,%al
+   c3290:	jne    c3a74 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1924>
+   c3296:	shr    $0x3,%rax
+   c329a:	mov    $0x6,%edx
+   c329f:	and    $0x1,%eax
+   c32a2:	sub    %rax,%rdx
+   c32a5:	and    $0xfffffffffffffffe,%rdx
+   c32a9:	or     %rax,%rdx
+   c32ac:	test   %rax,%rax
+   c32af:	je     c32c6 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1176>
+   c32b1:	movsd  -0x370(%rbp),%xmm0
+   c32b9:	subsd  0x0(%r13),%xmm0
+   c32bf:	movsd  %xmm0,0x30(%r12)
+   c32c6:	lea    -0x370(%rbp),%rcx
+   c32cd:	movapd 0x53ccb(%rip),%xmm1        # 116fa0 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0xba0>
+   c32d5:	nopl   (%rax)
+   c32d8:	movupd 0x0(%r13,%rax,8),%xmm0
+   c32df:	xorpd  %xmm1,%xmm0
+   c32e3:	movupd (%rcx,%rax,8),%xmm7
+   c32e8:	addpd  %xmm7,%xmm0
+   c32ec:	movaps %xmm0,0x30(%r12,%rax,8)
+   c32f2:	add    $0x2,%rax
+   c32f6:	cmp    %rax,%rdx
+   c32f9:	jg     c32d8 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1188>
+   c32fb:	cmp    $0x5,%rdx
+   c32ff:	jg     c3341 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x11f1>
+   c3301:	lea    0x0(,%rdx,8),%rax
+   c3309:	cmp    $0x5,%rdx
+   c330d:	movsd  -0x370(%rbp,%rax,1),%xmm0
+   c3316:	subsd  0x0(%r13,%rdx,8),%xmm0
+   c331d:	movsd  %xmm0,0x30(%r12,%rax,1)
+   c3324:	je     c3341 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x11f1>
+   c3326:	lea    0x8(%rax),%rdx
+   c332a:	movsd  -0x370(%rbp,%rdx,1),%xmm0
+   c3333:	subsd  0x8(%r13,%rax,1),%xmm0
+   c333a:	movsd  %xmm0,0x30(%r12,%rdx,1)
+   c3341:	mov    -0x598(%rbp),%rdi
+   c3348:	mov    %rbx,%rsi
+   c334b:	movapd 0x5de6d(%rip),%xmm0        # 1211c0 <typeinfo name for Z1Model+0x6a0>
+   c3353:	mov    (%rdi),%rax
+   c3356:	movapd 0x1ee82(%rip),%xmm6        # e21e0 <typeinfo name for State_Cartesian+0xb0>
+   c335e:	movaps %xmm0,-0x340(%rbp)
+   c3365:	movaps %xmm0,-0x330(%rbp)
+   c336c:	movaps %xmm0,-0x320(%rbp)
+   c3373:	movaps %xmm6,-0x310(%rbp)
+   c337a:	movaps %xmm6,-0x300(%rbp)
+   c3381:	movaps %xmm6,-0x2f0(%rbp)
+   c3388:	movdqa 0x0(%r13),%xmm0
+   c338e:	mov    0x10(%rax),%rax
+   c3392:	movaps %xmm0,-0x160(%rbp)
+   c3399:	movdqa 0x10(%r13),%xmm0
+   c339f:	movaps %xmm0,-0x150(%rbp)
+   c33a6:	movdqa 0x20(%r13),%xmm0
+   c33ac:	movaps %xmm0,-0x140(%rbp)
+   c33b3:	callq  *%rax
+   c33b5:	test   %al,%al
+   c33b7:	movsd  0x1ee49(%rip),%xmm0        # e2208 <typeinfo name for State_Cartesian+0xd8>
+   c33bf:	je     c33df <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x128f>
+   c33c1:	mov    0x5ddb8(%rip),%rax        # 121180 <typeinfo name for Z1Model+0x660>
+   c33c8:	movsd  0x5dda8(%rip),%xmm0        # 121178 <typeinfo name for Z1Model+0x658>
+   c33d0:	movsd  %xmm0,-0x310(%rbp)
+   c33d8:	mov    %rax,-0x340(%rbp)
+   c33df:	cmp    $0x11,%r14
+   c33e3:	lea    0x60(%r12),%rax
+   c33e8:	jle    c3f01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1db1>
+   c33ee:	test   $0x7,%al
+   c33f0:	jne    c3a42 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x18f2>
+   c33f6:	shr    $0x3,%rax
+   c33fa:	mov    $0x6,%edx
+   c33ff:	and    $0x1,%eax
+   c3402:	sub    %rax,%rdx
+   c3405:	and    $0xfffffffffffffffe,%rdx
+   c3409:	or     %rax,%rdx
+   c340c:	test   %rax,%rax
+   c340f:	je     c3418 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x12c8>
+   c3411:	movsd  %xmm0,0x60(%r12)
+   c3418:	movapd 0x53b80(%rip),%xmm1        # 116fa0 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0xba0>
+   c3420:	lea    -0x340(%rbp),%rcx
+   c3427:	nopw   0x0(%rax,%rax,1)
+   c3430:	movupd (%rcx,%rax,8),%xmm0
+   c3435:	xorpd  %xmm1,%xmm0
+   c3439:	movaps %xmm0,0x60(%r12,%rax,8)
+   c343f:	add    $0x2,%rax
+   c3443:	cmp    %rax,%rdx
+   c3446:	jg     c3430 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x12e0>
+   c3448:	cmp    $0x5,%rdx
+   c344c:	jg     c348c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x133c>
+   c344e:	lea    0x0(,%rdx,8),%rax
+   c3456:	cmp    $0x5,%rdx
+   c345a:	movsd  -0x340(%rbp,%rax,1),%xmm0
+   c3463:	xorpd  0x199a5(%rip),%xmm0        # dce10 <typeinfo name for State_BackToStart+0x20>
+   c346b:	movsd  %xmm0,0x60(%r12,%rax,1)
+   c3472:	je     c348c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x133c>
+   c3474:	movsd  -0x338(%rbp,%rax,1),%xmm0
+   c347d:	xorpd  0x1998b(%rip),%xmm0        # dce10 <typeinfo name for State_BackToStart+0x20>
+   c3485:	movsd  %xmm0,0x68(%r12,%rax,1)
+   c348c:	cmp    $0x17,%r14
+   c3490:	lea    0x90(%r12),%rdi
+   c3498:	jle    c3f01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1db1>
+   c349e:	test   $0x7,%dil
+   c34a2:	jne    c3a14 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x18c4>
+   c34a8:	shr    $0x3,%rdi
+   c34ac:	mov    $0x6,%edx
+   c34b1:	and    $0x1,%edi
+   c34b4:	sub    %rdi,%rdx
+   c34b7:	and    $0xfffffffffffffffe,%rdx
+   c34bb:	or     %rdi,%rdx
+   c34be:	test   %rdi,%rdi
+   c34c1:	je     c34d5 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1385>
+   c34c3:	movsd  -0x310(%rbp),%xmm0
+   c34cb:	movsd  %xmm0,0x90(%r12)
+   c34d5:	mov    %rdi,%rsi
+   c34d8:	mov    -0x5b0(%rbp),%rbx
+   c34df:	lea    0x12(%rdi),%r8
+   c34e3:	not    %rsi
+   c34e6:	add    %rdx,%rsi
+   c34e9:	shl    $0x3,%r8
+   c34ed:	shr    %rsi
+   c34f0:	lea    (%r12,%r8,1),%rcx
+   c34f4:	add    $0x1,%rsi
+   c34f8:	mov    %rsi,%rax
+   c34fb:	mov    $0x10,%esi
+   c3500:	shl    $0x4,%rax
+   c3504:	cmp    %rdx,%rdi
+   c3507:	cmovge %rsi,%rax
+   c350b:	lea    -0x90(%rbx,%r8,1),%rsi
+   c3513:	mov    (%rsi),%rdi
+   c3516:	mov    %rdi,(%rcx)
+   c3519:	mov    %eax,%edi
+   c351b:	mov    -0x8(%rsi,%rdi,1),%r8
+   c3520:	mov    %r8,-0x8(%rcx,%rdi,1)
+   c3525:	lea    0x8(%rcx),%rdi
+   c3529:	and    $0xfffffffffffffff8,%rdi
+   c352d:	sub    %rdi,%rcx
+   c3530:	add    %ecx,%eax
+   c3532:	sub    %rcx,%rsi
+   c3535:	shr    $0x3,%eax
+   c3538:	cmp    $0x5,%rdx
+   c353c:	mov    %eax,%ecx
+   c353e:	rep movsq %ds:(%rsi),%es:(%rdi)
+   c3541:	jg     c3576 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1426>
+   c3543:	lea    0x90(,%rdx,8),%rsi
+   c354b:	neg    %rdx
+   c354e:	lea    0x30(,%rdx,8),%rax
+   c3556:	lea    (%r12,%rsi,1),%rcx
+   c355a:	lea    -0x90(%rbx,%rsi,1),%rdx
+   c3562:	cmp    $0x8,%rax
+   c3566:	jae    c39c9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1879>
+   c356c:	test   %rax,%rax
+   c356f:	je     c3576 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1426>
+   c3571:	movzbl (%rdx),%eax
+   c3574:	mov    %al,(%rcx)
+   c3576:	mov    -0x598(%rbp),%rax
+   c357d:	mov    0x8(%rax),%r11
+   c3581:	test   %r11,%r11
+   c3584:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c358a:	mov    -0x588(%rbp),%rdx
+   c3591:	movsd  -0x280(%rbp),%xmm0
+   c3599:	cmp    $0x6,%r11
+   c359d:	mov    (%rdx),%rax
+   c35a0:	movsd  %xmm0,(%rax)
+   c35a4:	je     c3b42 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x19f2>
+   c35aa:	cmp    $0x1,%r11
+   c35ae:	jbe    c3748 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x15f8>
+   c35b4:	movsd  -0x250(%rbp),%xmm0
+   c35bc:	cmp    $0x2,%r11
+   c35c0:	movsd  %xmm0,0x8(%rax)
+   c35c5:	je     c3b20 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x19d0>
+   c35cb:	movsd  -0x220(%rbp),%xmm0
+   c35d3:	cmp    $0x3,%r11
+   c35d7:	movsd  %xmm0,0x10(%rax)
+   c35dc:	je     c3d1d <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1bcd>
+   c35e2:	movsd  -0x1f0(%rbp),%xmm0
+   c35ea:	cmp    $0x4,%r11
+   c35ee:	movsd  %xmm0,0x18(%rax)
+   c35f3:	je     c3d76 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1c26>
+   c35f9:	movsd  -0x1c0(%rbp),%xmm0
+   c3601:	cmp    $0x5,%r11
+   c3605:	movsd  %xmm0,0x20(%rax)
+   c360a:	je     c3638 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x14e8>
+   c360c:	movsd  -0x190(%rbp),%xmm0
+   c3614:	lea    0x55265(%rip),%rcx        # 118880 <Eigen::DenseCoeffsBase<Eigen::Matrix<double, 6, 6, 0, 6, 6>, 1>::operator()(long, long)::__PRETTY_FUNCTION__>
+   c361b:	lea    0x1936e(%rip),%rsi        # dc990 <typeinfo name for FSMState+0xb0>
+   c3622:	lea    0x20db7(%rip),%rdi        # e43e0 <typeinfo name for State_Trajectory+0x370>
+   c3629:	mov    $0x16d,%edx
+   c362e:	movsd  %xmm0,0x28(%rax)
+   c3633:	callq  292e0 <__assert_fail@plt>
+   c3638:	mov    0x8(%rdx),%rax
+   c363c:	movsd  -0x278(%rbp),%xmm0
+   c3644:	movsd  %xmm0,(%rax)
+   c3648:	movsd  -0x248(%rbp),%xmm0
+   c3650:	movsd  %xmm0,0x8(%rax)
+   c3655:	movsd  -0x218(%rbp),%xmm0
+   c365d:	movsd  %xmm0,0x10(%rax)
+   c3662:	movsd  -0x1e8(%rbp),%xmm0
+   c366a:	movsd  %xmm0,0x18(%rax)
+   c366f:	movsd  -0x1b8(%rbp),%xmm0
+   c3677:	movsd  %xmm0,0x20(%rax)
+   c367c:	mov    0x10(%rdx),%rax
+   c3680:	movsd  -0x270(%rbp),%xmm0
+   c3688:	movsd  %xmm0,(%rax)
+   c368c:	movsd  -0x240(%rbp),%xmm0
+   c3694:	movsd  %xmm0,0x8(%rax)
+   c3699:	movsd  -0x210(%rbp),%xmm0
+   c36a1:	movsd  %xmm0,0x10(%rax)
+   c36a6:	movsd  -0x1e0(%rbp),%xmm0
+   c36ae:	movsd  %xmm0,0x18(%rax)
+   c36b3:	movsd  -0x1b0(%rbp),%xmm0
+   c36bb:	movsd  %xmm0,0x20(%rax)
+   c36c0:	mov    0x18(%rdx),%rax
+   c36c4:	movsd  -0x268(%rbp),%xmm0
+   c36cc:	movsd  %xmm0,(%rax)
+   c36d0:	movsd  -0x238(%rbp),%xmm0
+   c36d8:	movsd  %xmm0,0x8(%rax)
+   c36dd:	movsd  -0x208(%rbp),%xmm0
+   c36e5:	movsd  %xmm0,0x10(%rax)
+   c36ea:	movsd  -0x1d8(%rbp),%xmm0
+   c36f2:	movsd  %xmm0,0x18(%rax)
+   c36f7:	movsd  -0x1a8(%rbp),%xmm0
+   c36ff:	movsd  %xmm0,0x20(%rax)
+   c3704:	mov    0x20(%rdx),%rax
+   c3708:	movsd  -0x260(%rbp),%xmm0
+   c3710:	movsd  %xmm0,(%rax)
+   c3714:	movsd  -0x230(%rbp),%xmm0
+   c371c:	movsd  %xmm0,0x8(%rax)
+   c3721:	movsd  -0x200(%rbp),%xmm0
+   c3729:	movsd  %xmm0,0x10(%rax)
+   c372e:	movsd  -0x1d0(%rbp),%xmm0
+   c3736:	movsd  %xmm0,0x18(%rax)
+   c373b:	movsd  -0x1a0(%rbp),%xmm0
+   c3743:	movsd  %xmm0,0x20(%rax)
+   c3748:	mov    -0x508(%rbp),%r10
+   c374f:	mov    -0x500(%rbp),%rsi
+   c3756:	xor    %r8d,%r8d
+   c3759:	mov    -0x568(%rbp),%rbx
+   c3760:	mov    -0x510(%rbp),%r9
+   c3767:	lea    0x0(,%r10,8),%rdi
+   c376f:	nop
+   c3770:	cmp    %r8,%r10
+   c3773:	jle    c3b01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x19b1>
+   c3779:	test   %rsi,%rsi
+   c377c:	jle    c3b01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x19b1>
+   c3782:	mov    (%rbx,%r8,8),%rcx
+   c3786:	mov    %r9,%rdx
+   c3789:	xor    %eax,%eax
+   c378b:	jmp    c37a0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1650>
+   c378d:	nopl   (%rax)
+   c3790:	add    $0x1,%rax
+   c3794:	add    %rdi,%rdx
+   c3797:	cmp    %rax,%rsi
+   c379a:	je     c3b01 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x19b1>
+   c37a0:	movsd  (%rdx),%xmm0
+   c37a4:	cmp    $0x17,%rax
+   c37a8:	movsd  %xmm0,(%rcx,%rax,8)
+   c37ad:	jne    c3790 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1640>
+   c37af:	add    $0x1,%r8
+   c37b3:	add    $0x8,%r9
+   c37b7:	cmp    %r8,%r11
+   c37ba:	jne    c3770 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1620>
+   c37bc:	mov    -0x558(%rbp),%rax
+   c37c3:	movsd  -0x3d0(%rbp),%xmm0
+   c37cb:	cmp    $0x1,%r11
+   c37cf:	movsd  %xmm0,(%rax)
+   c37d3:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c37d5:	movsd  -0x3c8(%rbp),%xmm0
+   c37dd:	cmp    $0x2,%r11
+   c37e1:	movsd  %xmm0,0x8(%rax)
+   c37e6:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c37e8:	movsd  -0x3c0(%rbp),%xmm0
+   c37f0:	cmp    $0x3,%r11
+   c37f4:	movsd  %xmm0,0x10(%rax)
+   c37f9:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c37fb:	movsd  -0x3b8(%rbp),%xmm0
+   c3803:	cmp    $0x4,%r11
+   c3807:	movsd  %xmm0,0x18(%rax)
+   c380c:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c380e:	movsd  -0x3b0(%rbp),%xmm0
+   c3816:	cmp    $0x5,%r11
+   c381a:	movsd  %xmm0,0x20(%rax)
+   c381f:	je     c3838 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x16e8>
+   c3821:	movsd  -0x3a8(%rbp),%xmm0
+   c3829:	cmp    $0x6,%r11
+   c382d:	movsd  %xmm0,0x28(%rax)
+   c3832:	jne    c27d9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x689>
+   c3838:	mov    -0x538(%rbp),%rdx
+   c383f:	movsd  (%r12),%xmm0
+   c3845:	mov    $0x1,%eax
+   c384a:	movsd  %xmm0,(%rdx)
+   c384e:	xchg   %ax,%ax
+   c3850:	movsd  (%r12,%rax,8),%xmm0
+   c3856:	movsd  %xmm0,(%rdx,%rax,8)
+   c385b:	add    $0x1,%rax
+   c385f:	cmp    $0x18,%rax
+   c3863:	jne    c3850 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1700>
+   c3865:	lea    -0x530(%rbp),%rax
+   c386c:	lea    -0x570(%rbp),%r14
+   c3873:	lea    -0x580(%rbp),%r13
+   c387a:	lea    -0x590(%rbp),%rbx
+   c3881:	sub    $0x8,%rsp
+   c3885:	lea    -0x550(%rbp),%rcx
+   c388c:	lea    -0x560(%rbp),%rsi
+   c3893:	push   %rax
+   c3894:	lea    -0x540(%rbp),%r9
+   c389b:	mov    %r14,%r8
+   c389e:	mov    %r13,%rdx
+   c38a1:	mov    %rbx,%rdi
+   c38a4:	callq  2a220 <quadprogpp::solve_quadprog(quadprogpp::Matrix<double>&, quadprogpp::Vector<double>&, quadprogpp::Matrix<double> const&, quadprogpp::Vector<double> const&, quadprogpp::Matrix<double> const&, quadprogpp::Vector<double> const&, quadprogpp::Vector<double>&)@plt>
+   c38a9:	pop    %rax
+   c38aa:	mov    -0x598(%rbp),%rax
+   c38b1:	pop    %rdx
+   c38b2:	mov    0x8(%rax),%rax
+   c38b6:	test   %rax,%rax
+   c38b9:	je     c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c38bb:	mov    -0x528(%rbp),%rdx
+   c38c2:	mov    -0x5a8(%rbp),%rsi
+   c38c9:	cmp    $0x1,%rax
+   c38cd:	movsd  (%rdx),%xmm0
+   c38d1:	movsd  %xmm0,(%rsi)
+   c38d5:	jbe    c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c38d7:	movsd  0x8(%rdx),%xmm0
+   c38dc:	cmp    $0x2,%rax
+   c38e0:	movsd  %xmm0,0x8(%rsi)
+   c38e5:	je     c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c38e7:	movsd  0x10(%rdx),%xmm0
+   c38ec:	cmp    $0x3,%rax
+   c38f0:	movsd  %xmm0,0x10(%rsi)
+   c38f5:	je     c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c38f7:	movsd  0x18(%rdx),%xmm0
+   c38fc:	cmp    $0x4,%rax
+   c3900:	movsd  %xmm0,0x18(%rsi)
+   c3905:	je     c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c3907:	movsd  0x20(%rdx),%xmm0
+   c390c:	cmp    $0x5,%rax
+   c3910:	movsd  %xmm0,0x20(%rsi)
+   c3915:	je     c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c3917:	movsd  0x28(%rdx),%xmm0
+   c391c:	cmp    $0x6,%rax
+   c3920:	movsd  %xmm0,0x28(%rsi)
+   c3925:	jne    c27d9 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x689>
+   c392b:	mov    -0x4f0(%rbp),%rdi
+   c3932:	callq  29d30 <free@plt>
+   c3937:	mov    -0x510(%rbp),%rdi
+   c393e:	callq  29d30 <free@plt>
+   c3943:	mov    %r12,%rdi
+   c3946:	callq  29d30 <free@plt>
+   c394b:	mov    -0x528(%rbp),%rdi
+   c3952:	test   %rdi,%rdi
+   c3955:	je     c395c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x180c>
+   c3957:	callq  29ed0 <operator delete[](void*)@plt>
+   c395c:	mov    -0x538(%rbp),%rdi
+   c3963:	test   %rdi,%rdi
+   c3966:	je     c396d <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x181d>
+   c3968:	callq  29ed0 <operator delete[](void*)@plt>
+   c396d:	mov    -0x548(%rbp),%rdi
+   c3974:	test   %rdi,%rdi
+   c3977:	je     c397e <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x182e>
+   c3979:	callq  29ed0 <operator delete[](void*)@plt>
+   c397e:	mov    -0x558(%rbp),%rdi
+   c3985:	test   %rdi,%rdi
+   c3988:	je     c398f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x183f>
+   c398a:	callq  29ed0 <operator delete[](void*)@plt>
+   c398f:	mov    %r14,%rdi
+   c3992:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c3997:	mov    %r13,%rdi
+   c399a:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c399f:	mov    %rbx,%rdi
+   c39a2:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c39a7:	mov    -0x38(%rbp),%rax
+   c39ab:	xor    %fs:0x28,%rax
+   c39b4:	jne    c3e51 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d01>
+   c39ba:	lea    -0x28(%rbp),%rsp
+   c39be:	pop    %rbx
+   c39bf:	pop    %r12
+   c39c1:	pop    %r13
+   c39c3:	pop    %r14
+   c39c5:	pop    %r15
+   c39c7:	pop    %rbp
+   c39c8:	retq   
+   c39c9:	mov    (%rdx),%rsi
+   c39cc:	mov    %rsi,(%rcx)
+   c39cf:	mov    -0x8(%rax,%rdx,1),%rsi
+   c39d4:	mov    %rsi,-0x8(%rcx,%rax,1)
+   c39d9:	lea    0x8(%rcx),%rsi
+   c39dd:	and    $0xfffffffffffffff8,%rsi
+   c39e1:	sub    %rsi,%rcx
+   c39e4:	add    %rcx,%rax
+   c39e7:	sub    %rcx,%rdx
+   c39ea:	and    $0xfffffffffffffff8,%rax
+   c39ee:	cmp    $0x8,%rax
+   c39f2:	jb     c3576 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1426>
+   c39f8:	and    $0xfffffffffffffff8,%rax
+   c39fc:	xor    %ecx,%ecx
+   c39fe:	mov    (%rdx,%rcx,1),%rdi
+   c3a02:	mov    %rdi,(%rsi,%rcx,1)
+   c3a06:	add    $0x8,%rcx
+   c3a0a:	cmp    %rax,%rcx
+   c3a0d:	jb     c39fe <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x18ae>
+   c3a0f:	jmpq   c3576 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1426>
+   c3a14:	movdqa -0x310(%rbp),%xmm0
+   c3a1c:	movups %xmm0,0x90(%r12)
+   c3a25:	movdqa -0x300(%rbp),%xmm0
+   c3a2d:	movups %xmm0,0x10(%rdi)
+   c3a31:	movdqa -0x2f0(%rbp),%xmm0
+   c3a39:	movups %xmm0,0x20(%rdi)
+   c3a3d:	jmpq   c3576 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1426>
+   c3a42:	movapd -0x340(%rbp),%xmm0
+   c3a4a:	xorpd  0x5354e(%rip),%xmm0        # 116fa0 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0xba0>
+   c3a52:	movapd 0x1e786(%rip),%xmm7        # e21e0 <typeinfo name for State_Cartesian+0xb0>
+   c3a5a:	movups %xmm7,0x70(%r12)
+   c3a60:	movups %xmm0,0x60(%r12)
+   c3a66:	movups %xmm7,0x80(%r12)
+   c3a6f:	jmpq   c348c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x133c>
+   c3a74:	movupd 0x0(%r13),%xmm7
+   c3a7a:	movapd -0x370(%rbp),%xmm0
+   c3a82:	subpd  %xmm7,%xmm0
+   c3a86:	movups %xmm0,0x30(%r12)
+   c3a8c:	movapd -0x360(%rbp),%xmm0
+   c3a94:	movupd 0x10(%r13),%xmm7
+   c3a9a:	subpd  %xmm7,%xmm0
+   c3a9e:	movups %xmm0,0x40(%r12)
+   c3aa4:	movapd -0x350(%rbp),%xmm0
+   c3aac:	movupd 0x20(%r13),%xmm7
+   c3ab2:	subpd  %xmm7,%xmm0
+   c3ab6:	movups %xmm0,0x50(%r12)
+   c3abc:	jmpq   c3341 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x11f1>
+   c3ac1:	movupd 0x0(%r13),%xmm0
+   c3ac7:	subpd  -0x3a0(%rbp),%xmm0
+   c3acf:	movups %xmm0,(%r12)
+   c3ad4:	movupd 0x10(%r13),%xmm0
+   c3ada:	subpd  -0x390(%rbp),%xmm0
+   c3ae2:	movups %xmm0,0x10(%r12)
+   c3ae8:	movupd 0x20(%r13),%xmm0
+   c3aee:	subpd  -0x380(%rbp),%xmm0
+   c3af6:	movups %xmm0,0x20(%r12)
+   c3afc:	jmpq   c327f <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x112f>
+   c3b01:	lea    0x54c78(%rip),%rcx        # 118780 <Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1, 0, -1, -1>, 1>::operator()(long, long)::__PRETTY_FUNCTION__>
+   c3b08:	lea    0x18e81(%rip),%rsi        # dc990 <typeinfo name for FSMState+0xb0>
+   c3b0f:	lea    0x208ca(%rip),%rdi        # e43e0 <typeinfo name for State_Trajectory+0x370>
+   c3b16:	mov    $0x16d,%edx
+   c3b1b:	callq  292e0 <__assert_fail@plt>
+   c3b20:	mov    0x8(%rdx),%rax
+   c3b24:	movsd  -0x278(%rbp),%xmm0
+   c3b2c:	movsd  %xmm0,(%rax)
+   c3b30:	movsd  -0x248(%rbp),%xmm0
+   c3b38:	movsd  %xmm0,0x8(%rax)
+   c3b3d:	jmpq   c3748 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x15f8>
+   c3b42:	movsd  -0x250(%rbp),%xmm0
+   c3b4a:	movsd  %xmm0,0x8(%rax)
+   c3b4f:	movsd  -0x220(%rbp),%xmm0
+   c3b57:	movsd  %xmm0,0x10(%rax)
+   c3b5c:	movsd  -0x1f0(%rbp),%xmm0
+   c3b64:	movsd  %xmm0,0x18(%rax)
+   c3b69:	movsd  -0x1c0(%rbp),%xmm0
+   c3b71:	movsd  %xmm0,0x20(%rax)
+   c3b76:	movsd  -0x190(%rbp),%xmm0
+   c3b7e:	movsd  %xmm0,0x28(%rax)
+   c3b83:	mov    0x8(%rdx),%rax
+   c3b87:	movsd  -0x278(%rbp),%xmm0
+   c3b8f:	movsd  %xmm0,(%rax)
+   c3b93:	movsd  -0x248(%rbp),%xmm0
+   c3b9b:	movsd  %xmm0,0x8(%rax)
+   c3ba0:	movsd  -0x218(%rbp),%xmm0
+   c3ba8:	movsd  %xmm0,0x10(%rax)
+   c3bad:	movsd  -0x1e8(%rbp),%xmm0
+   c3bb5:	movsd  %xmm0,0x18(%rax)
+   c3bba:	movsd  -0x1b8(%rbp),%xmm0
+   c3bc2:	movsd  %xmm0,0x20(%rax)
+   c3bc7:	movsd  -0x188(%rbp),%xmm0
+   c3bcf:	movsd  %xmm0,0x28(%rax)
+   c3bd4:	mov    0x10(%rdx),%rax
+   c3bd8:	movsd  -0x270(%rbp),%xmm0
+   c3be0:	movsd  %xmm0,(%rax)
+   c3be4:	movsd  -0x240(%rbp),%xmm0
+   c3bec:	movsd  %xmm0,0x8(%rax)
+   c3bf1:	movsd  -0x210(%rbp),%xmm0
+   c3bf9:	movsd  %xmm0,0x10(%rax)
+   c3bfe:	movsd  -0x1e0(%rbp),%xmm0
+   c3c06:	movsd  %xmm0,0x18(%rax)
+   c3c0b:	movsd  -0x1b0(%rbp),%xmm0
+   c3c13:	movsd  %xmm0,0x20(%rax)
+   c3c18:	movsd  -0x180(%rbp),%xmm0
+   c3c20:	movsd  %xmm0,0x28(%rax)
+   c3c25:	mov    0x18(%rdx),%rax
+   c3c29:	movsd  -0x268(%rbp),%xmm0
+   c3c31:	movsd  %xmm0,(%rax)
+   c3c35:	movsd  -0x238(%rbp),%xmm0
+   c3c3d:	movsd  %xmm0,0x8(%rax)
+   c3c42:	movsd  -0x208(%rbp),%xmm0
+   c3c4a:	movsd  %xmm0,0x10(%rax)
+   c3c4f:	movsd  -0x1d8(%rbp),%xmm0
+   c3c57:	movsd  %xmm0,0x18(%rax)
+   c3c5c:	movsd  -0x1a8(%rbp),%xmm0
+   c3c64:	movsd  %xmm0,0x20(%rax)
+   c3c69:	movsd  -0x178(%rbp),%xmm0
+   c3c71:	movsd  %xmm0,0x28(%rax)
+   c3c76:	mov    0x20(%rdx),%rax
+   c3c7a:	movsd  -0x260(%rbp),%xmm0
+   c3c82:	movsd  %xmm0,(%rax)
+   c3c86:	movsd  -0x230(%rbp),%xmm0
+   c3c8e:	movsd  %xmm0,0x8(%rax)
+   c3c93:	movsd  -0x200(%rbp),%xmm0
+   c3c9b:	movsd  %xmm0,0x10(%rax)
+   c3ca0:	movsd  -0x1d0(%rbp),%xmm0
+   c3ca8:	movsd  %xmm0,0x18(%rax)
+   c3cad:	movsd  -0x1a0(%rbp),%xmm0
+   c3cb5:	movsd  %xmm0,0x20(%rax)
+   c3cba:	movsd  -0x170(%rbp),%xmm0
+   c3cc2:	movsd  %xmm0,0x28(%rax)
+   c3cc7:	mov    0x28(%rdx),%rax
+   c3ccb:	movsd  -0x258(%rbp),%xmm0
+   c3cd3:	movsd  %xmm0,(%rax)
+   c3cd7:	movsd  -0x228(%rbp),%xmm0
+   c3cdf:	movsd  %xmm0,0x8(%rax)
+   c3ce4:	movsd  -0x1f8(%rbp),%xmm0
+   c3cec:	movsd  %xmm0,0x10(%rax)
+   c3cf1:	movsd  -0x1c8(%rbp),%xmm0
+   c3cf9:	movsd  %xmm0,0x18(%rax)
+   c3cfe:	movsd  -0x198(%rbp),%xmm0
+   c3d06:	movsd  %xmm0,0x20(%rax)
+   c3d0b:	movsd  -0x168(%rbp),%xmm0
+   c3d13:	movsd  %xmm0,0x28(%rax)
+   c3d18:	jmpq   c3748 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x15f8>
+   c3d1d:	mov    0x8(%rdx),%rax
+   c3d21:	movsd  -0x278(%rbp),%xmm0
+   c3d29:	movsd  %xmm0,(%rax)
+   c3d2d:	movsd  -0x248(%rbp),%xmm0
+   c3d35:	movsd  %xmm0,0x8(%rax)
+   c3d3a:	movsd  -0x218(%rbp),%xmm0
+   c3d42:	movsd  %xmm0,0x10(%rax)
+   c3d47:	mov    0x10(%rdx),%rax
+   c3d4b:	movsd  -0x270(%rbp),%xmm0
+   c3d53:	movsd  %xmm0,(%rax)
+   c3d57:	movsd  -0x240(%rbp),%xmm0
+   c3d5f:	movsd  %xmm0,0x8(%rax)
+   c3d64:	movsd  -0x210(%rbp),%xmm0
+   c3d6c:	movsd  %xmm0,0x10(%rax)
+   c3d71:	jmpq   c3748 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x15f8>
+   c3d76:	mov    0x8(%rdx),%rax
+   c3d7a:	movsd  -0x278(%rbp),%xmm0
+   c3d82:	movsd  %xmm0,(%rax)
+   c3d86:	movsd  -0x248(%rbp),%xmm0
+   c3d8e:	movsd  %xmm0,0x8(%rax)
+   c3d93:	movsd  -0x218(%rbp),%xmm0
+   c3d9b:	movsd  %xmm0,0x10(%rax)
+   c3da0:	movsd  -0x1e8(%rbp),%xmm0
+   c3da8:	movsd  %xmm0,0x18(%rax)
+   c3dad:	mov    0x10(%rdx),%rax
+   c3db1:	movsd  -0x270(%rbp),%xmm0
+   c3db9:	movsd  %xmm0,(%rax)
+   c3dbd:	movsd  -0x240(%rbp),%xmm0
+   c3dc5:	movsd  %xmm0,0x8(%rax)
+   c3dca:	movsd  -0x210(%rbp),%xmm0
+   c3dd2:	movsd  %xmm0,0x10(%rax)
+   c3dd7:	movsd  -0x1e0(%rbp),%xmm0
+   c3ddf:	movsd  %xmm0,0x18(%rax)
+   c3de4:	mov    0x18(%rdx),%rax
+   c3de8:	movsd  -0x268(%rbp),%xmm0
+   c3df0:	movsd  %xmm0,(%rax)
+   c3df4:	movsd  -0x238(%rbp),%xmm0
+   c3dfc:	movsd  %xmm0,0x8(%rax)
+   c3e01:	movsd  -0x208(%rbp),%xmm0
+   c3e09:	movsd  %xmm0,0x10(%rax)
+   c3e0e:	movsd  -0x1d8(%rbp),%xmm0
+   c3e16:	movsd  %xmm0,0x18(%rax)
+   c3e1b:	jmpq   c3748 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x15f8>
+   c3e20:	sub    $0x1,%rdx
+   c3e24:	mov    %rax,%r15
+   c3e27:	jne    c3e79 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d29>
+   c3e29:	mov    %rax,%rdi
+   c3e2c:	callq  28c80 <__cxa_begin_catch@plt>
+   c3e31:	pxor   %xmm0,%xmm0
+   c3e35:	mov    -0x5a8(%rbp),%rax
+   c3e3c:	movaps %xmm0,(%rax)
+   c3e3f:	movaps %xmm0,0x10(%rax)
+   c3e43:	movaps %xmm0,0x20(%rax)
+   c3e47:	callq  2a630 <__cxa_end_catch@plt>
+   c3e4c:	jmpq   c392b <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x17db>
+   c3e51:	callq  29c00 <__stack_chk_fail@plt>
+   c3e56:	mov    %rax,%rbx
+   c3e59:	mov    %r15,%rdi
+   c3e5c:	lea    -0x570(%rbp),%r14
+   c3e63:	mov    %rbx,%r15
+   c3e66:	lea    -0x580(%rbp),%r13
+   c3e6d:	lea    -0x590(%rbp),%rbx
+   c3e74:	callq  29d30 <free@plt>
+   c3e79:	mov    -0x4f0(%rbp),%rdi
+   c3e80:	callq  29d30 <free@plt>
+   c3e85:	mov    -0x510(%rbp),%rdi
+   c3e8c:	callq  29d30 <free@plt>
+   c3e91:	mov    -0x520(%rbp),%rdi
+   c3e98:	callq  29d30 <free@plt>
+   c3e9d:	mov    -0x528(%rbp),%rdi
+   c3ea4:	test   %rdi,%rdi
+   c3ea7:	je     c3eae <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d5e>
+   c3ea9:	callq  29ed0 <operator delete[](void*)@plt>
+   c3eae:	mov    -0x538(%rbp),%rdi
+   c3eb5:	test   %rdi,%rdi
+   c3eb8:	je     c3ebf <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d6f>
+   c3eba:	callq  29ed0 <operator delete[](void*)@plt>
+   c3ebf:	mov    -0x548(%rbp),%rdi
+   c3ec6:	test   %rdi,%rdi
+   c3ec9:	je     c3ed0 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d80>
+   c3ecb:	callq  29ed0 <operator delete[](void*)@plt>
+   c3ed0:	mov    -0x558(%rbp),%rdi
+   c3ed7:	test   %rdi,%rdi
+   c3eda:	je     c3ee1 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d91>
+   c3edc:	callq  29ed0 <operator delete[](void*)@plt>
+   c3ee1:	mov    %r14,%rdi
+   c3ee4:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c3ee9:	mov    %r13,%rdi
+   c3eec:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c3ef1:	mov    %rbx,%rdi
+   c3ef4:	callq  28940 <quadprogpp::Matrix<double>::~Matrix()@plt>
+   c3ef9:	mov    %r15,%rdi
+   c3efc:	callq  2a970 <_Unwind_Resume@plt>
+   c3f01:	lea    0x54a78(%rip),%rcx        # 118980 <Eigen::Block<Eigen::Matrix<double, -1, 1, 0, -1, 1>, -1, -1, false>::Block(Eigen::Matrix<double, -1, 1, 0, -1, 1>&, long, long, long, long)::__PRETTY_FUNCTION__>
+   c3f08:	lea    0x197f1(%rip),%rsi        # dd700 <typeinfo name for State_Calibration+0x8c0>
+   c3f0f:	lea    0x19942(%rip),%rdi        # dd858 <typeinfo name for State_Calibration+0xa18>
+   c3f16:	mov    $0x93,%edx
+   c3f1b:	callq  292e0 <__assert_fail@plt>
+   c3f20:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3f25:	callq  2b1b4 <Eigen::DenseBase<Eigen::Matrix<double, -1, -1, 0, -1, -1> >::Constant(long, long, double const&) [clone .isra.328] [clone .part.329]>
+   c3f2a:	mov    -0x4f0(%rbp),%rdi
+   c3f31:	mov    %rax,%rbx
+   c3f34:	lea    -0x570(%rbp),%r14
+   c3f3b:	mov    %rbx,%r15
+   c3f3e:	lea    -0x580(%rbp),%r13
+   c3f45:	lea    -0x590(%rbp),%rbx
+   c3f4c:	callq  29d30 <free@plt>
+   c3f51:	jmpq   c3e85 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d35>
+   c3f56:	cmpl   $0x0,-0x57c(%rbp)
+   c3f5d:	jne    c22f1 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1a1>
+   c3f63:	mov    %ebx,%r12d
+   c3f66:	jmpq   c238c <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x23c>
+   c3f6b:	mov    %rax,%r15
+   c3f6e:	lea    -0x570(%rbp),%r14
+   c3f75:	lea    -0x580(%rbp),%r13
+   c3f7c:	lea    -0x590(%rbp),%rbx
+   c3f83:	jmpq   c3e85 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d35>
+   c3f88:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3f8d:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3f92:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3f97:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3f9c:	callq  2a3c0 <Eigen::internal::throw_std_bad_alloc()@plt>
+   c3fa1:	lea    0x54bf8(%rip),%rcx        # 118ba0 <Eigen::Product<Eigen::Transpose<Eigen::Matrix<double, 6, 1, 0, 6, 1> >, Eigen::Matrix<double, -1, -1, 0, -1, -1>, 0>::Product(Eigen::Transpose<Eigen::Matrix<double, 6, 1, 0, 6, 1> > const&, Eigen::Matrix<double, -1, -1, 0, -1, -1> const&)::__PRETTY_FUNCTION__>
+   c3fa8:	lea    0x1a2c9(%rip),%rsi        # de278 <typeinfo name for State_Calibration+0x1438>
+   c3faf:	lea    0x1a2f2(%rip),%rdi        # de2a8 <typeinfo name for State_Calibration+0x1468>
+   c3fb6:	mov    $0x61,%edx
+   c3fbb:	callq  292e0 <__assert_fail@plt>
+   c3fc0:	lea    0x54ad9(%rip),%rcx        # 118aa0 <Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 1, -1, 1, 1, -1> const>::CwiseNullaryOp(long, long, Eigen::internal::scalar_constant_op<double> const&)::__PRETTY_FUNCTION__>
+   c3fc7:	lea    0x191a2(%rip),%rsi        # dd170 <typeinfo name for State_Calibration+0x330>
+   c3fce:	lea    0x191d3(%rip),%rdi        # dd1a8 <typeinfo name for State_Calibration+0x368>
+   c3fd5:	mov    $0x4a,%edx
+   c3fda:	callq  292e0 <__assert_fail@plt>
+   c3fdf:	jmpq   c3e56 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d06>
+   c3fe4:	mov    %rax,%r15
+   c3fe7:	lea    -0x570(%rbp),%r14
+   c3fee:	lea    -0x580(%rbp),%r13
+   c3ff5:	lea    -0x590(%rbp),%rbx
+   c3ffc:	jmpq   c3e79 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d29>
+   c4001:	mov    %rax,%rbx
+   c4004:	xor    %r15d,%r15d
+   c4007:	jmpq   c3e59 <Z1Model::solveQP(Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>, Eigen::Matrix<double, 6, 1, 0, 6, 1>&, double)+0x1d09>
+   c400c:	nopl   0x0(%rax)
+
+00000000000c4010 <ArmModel::~ArmModel()>:
+   c4010:	mov    0x274c71(%rip),%rax        # 338c88 <vtable for ArmModel@@Base+0xaf8>
+   c4017:	push   %rbx
+   c4018:	mov    %rdi,%rbx
+   c401b:	add    $0x10,%rax
+   c401f:	mov    %rax,(%rdi)
+   c4022:	mov    0x300(%rdi),%rdi
+   c4029:	test   %rdi,%rdi
+   c402c:	je     c4033 <ArmModel::~ArmModel()+0x23>
+   c402e:	callq  298a0 <operator delete(void*)@plt>
+   c4033:	mov    0x2e8(%rbx),%rdi
+   c403a:	test   %rdi,%rdi
+   c403d:	je     c4044 <ArmModel::~ArmModel()+0x34>
+   c403f:	callq  298a0 <operator delete(void*)@plt>
+   c4044:	mov    0x2d0(%rbx),%rdi
+   c404b:	test   %rdi,%rdi
+   c404e:	je     c4055 <ArmModel::~ArmModel()+0x45>
+   c4050:	callq  298a0 <operator delete(void*)@plt>
+   c4055:	mov    0x2b8(%rbx),%rdi
+   c405c:	test   %rdi,%rdi
+   c405f:	je     c4066 <ArmModel::~ArmModel()+0x56>
+   c4061:	callq  298a0 <operator delete(void*)@plt>
+   c4066:	mov    0x2a0(%rbx),%rdi
+   c406d:	test   %rdi,%rdi
+   c4070:	je     c4077 <ArmModel::~ArmModel()+0x67>
+   c4072:	callq  298a0 <operator delete(void*)@plt>
+   c4077:	mov    0x258(%rbx),%rdi
+   c407e:	test   %rdi,%rdi
+   c4081:	je     c4088 <ArmModel::~ArmModel()+0x78>
+   c4083:	callq  298a0 <operator delete(void*)@plt>
+   c4088:	mov    0x240(%rbx),%rdi
+   c408f:	test   %rdi,%rdi
+   c4092:	je     c4099 <ArmModel::~ArmModel()+0x89>
+   c4094:	callq  298a0 <operator delete(void*)@plt>
+   c4099:	mov    0x228(%rbx),%rdi
+   c40a0:	test   %rdi,%rdi
+   c40a3:	je     c40aa <ArmModel::~ArmModel()+0x9a>
+   c40a5:	callq  298a0 <operator delete(void*)@plt>
+   c40aa:	mov    0x210(%rbx),%rdi
+   c40b1:	test   %rdi,%rdi
+   c40b4:	je     c40bb <ArmModel::~ArmModel()+0xab>
+   c40b6:	callq  298a0 <operator delete(void*)@plt>
+   c40bb:	mov    0x1f8(%rbx),%rdi
+   c40c2:	test   %rdi,%rdi
+   c40c5:	je     c40cc <ArmModel::~ArmModel()+0xbc>
+   c40c7:	callq  298a0 <operator delete(void*)@plt>
+   c40cc:	mov    0x1e0(%rbx),%rdi
+   c40d3:	test   %rdi,%rdi
+   c40d6:	je     c40dd <ArmModel::~ArmModel()+0xcd>
+   c40d8:	callq  298a0 <operator delete(void*)@plt>
+   c40dd:	mov    0x90(%rbx),%rdi
+   c40e4:	test   %rdi,%rdi
+   c40e7:	je     c40f0 <ArmModel::~ArmModel()+0xe0>
+   c40e9:	pop    %rbx
+   c40ea:	jmpq   298a0 <operator delete(void*)@plt>
+   c40ef:	nop
+   c40f0:	pop    %rbx
+   c40f1:	retq   
+   c40f2:	nopw   %cs:0x0(%rax,%rax,1)
+   c40fc:	nopl   0x0(%rax)
+
+00000000000c4100 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)>:
+   c4100:	sub    $0x8,%rsp
+   c4104:	mov    0x10(%rdi),%rdx
+   c4108:	mov    %rdi,%rax
+   c410b:	cmp    $0x6,%rdx
+   c410f:	je     c4160 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0x60>
+   c4111:	cmp    $0x5,%rdx
+   c4115:	mov    (%rdi),%rdi
+   c4118:	jg     c41c7 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0xc7>
+   c411e:	cmpq   $0x3,0x18(%rax)
+   c4123:	jne    c41a8 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0xa8>
+   c4129:	mov    0x8(%rax),%rcx
+   c412d:	lea    (%rdx,%rdx,2),%r8
+   c4131:	test   %rdx,%rdx
+   c4134:	lea    (%rcx,%r8,2),%r8
+   c4138:	lea    (%rdi,%r8,8),%rdi
+   c413c:	js     c4189 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0x89>
+   c413e:	cmp    $0x3,%rcx
+   c4142:	ja     c4189 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0x89>
+   c4144:	movupd (%rsi),%xmm0
+   c4148:	movups %xmm0,(%rdi)
+   c414b:	movsd  0x10(%rsi),%xmm0
+   c4150:	movsd  %xmm0,0x10(%rdi)
+   c4155:	addq   $0x1,0x10(%rax)
+   c415a:	add    $0x8,%rsp
+   c415e:	retq   
+   c415f:	nop
+   c4160:	mov    0x18(%rdi),%rdx
+   c4164:	add    0x8(%rdi),%rdx
+   c4168:	movq   $0x0,0x10(%rdi)
+   c4170:	movq   $0x3,0x18(%rdi)
+   c4178:	cmp    $0x3,%rdx
+   c417c:	mov    %rdx,0x8(%rdi)
+   c4180:	jg     c41e6 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0xe6>
+   c4182:	mov    (%rdi),%rdi
+   c4185:	xor    %edx,%edx
+   c4187:	jmp    c4129 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >& Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)+0x29>
+   c4189:	lea    0x5b2f0(%rip),%rcx        # 11f480 <Eigen::Block<Eigen::Matrix<double, 6, 6, 0, 6, 6>, 3, 1, false>::Block(Eigen::Matrix<double, 6, 6, 0, 6, 6>&, long, long, long, long)::__PRETTY_FUNCTION__>
+   c4190:	lea    0x19569(%rip),%rsi        # dd700 <typeinfo name for State_Calibration+0x8c0>
+   c4197:	lea    0x196ba(%rip),%rdi        # dd858 <typeinfo name for State_Calibration+0xa18>
+   c419e:	mov    $0x93,%edx
+   c41a3:	callq  292e0 <__assert_fail@plt>
+   c41a8:	lea    0x5b3f1(%rip),%rcx        # 11f5a0 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)::__PRETTY_FUNCTION__>
+   c41af:	lea    0x1ffea(%rip),%rsi        # e41a0 <typeinfo name for State_Trajectory+0x130>
+   c41b6:	lea    0x524b3(%rip),%rdi        # 116670 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0x270>
+   c41bd:	mov    $0x5d,%edx
+   c41c2:	callq  292e0 <__assert_fail@plt>
+   c41c7:	lea    0x5b3d2(%rip),%rcx        # 11f5a0 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)::__PRETTY_FUNCTION__>
+   c41ce:	lea    0x1ffcb(%rip),%rsi        # e41a0 <typeinfo name for State_Trajectory+0x130>
+   c41d5:	lea    0x52424(%rip),%rdi        # 116600 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0x200>
+   c41dc:	mov    $0x5c,%edx
+   c41e1:	callq  292e0 <__assert_fail@plt>
+   c41e6:	lea    0x5b3b3(%rip),%rcx        # 11f5a0 <Eigen::CommaInitializer<Eigen::Matrix<double, 6, 6, 0, 6, 6> >::operator,<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::DenseBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&)::__PRETTY_FUNCTION__>
+   c41ed:	lea    0x1ffac(%rip),%rsi        # e41a0 <typeinfo name for State_Trajectory+0x130>
+   c41f4:	lea    0x5239d(%rip),%rdi        # 116598 <Eigen::internal::plain_array<double, 36, 0, 16>::plain_array()::__PRETTY_FUNCTION__+0x198>
+   c41fb:	mov    $0x59,%edx

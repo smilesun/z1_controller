@@ -1,0 +1,123 @@
+
+/home/sunxd/robustCapture/unitree_ws/z1_controller/lib/libZ1_x86_64.so:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000000a1d60 <CtrlComponents::CtrlComponents(int, char**)>:
+   a1d60:	push   %r13
+   a1d62:	push   %r12
+   a1d64:	lea    0x200(%rdi),%r12
+   a1d6b:	push   %rbp
+   a1d6c:	push   %rbx
+   a1d6d:	lea    0x10(%rdi),%rbp
+   a1d71:	mov    %rdi,%rbx
+   a1d74:	lea    0x58(%rdi),%rdi
+   a1d78:	mov    $0x12,%ecx
+   a1d7d:	sub    $0x8,%rsp
+   a1d81:	mov    0x75910(%rip),%rax        # 117698 <typeinfo name for std::_Sp_counted_ptr_inplace<Unitree_Gripper, std::allocator<Unitree_Gripper>, (__gnu_cxx::_Lock_policy)2>+0xb8>
+   a1d88:	mov    %rbp,-0x58(%rdi)
+   a1d8c:	movq   $0x0,-0x50(%rdi)
+   a1d94:	movb   $0x0,-0x48(%rdi)
+   a1d98:	movq   $0x0,-0x18(%rdi)
+   a1da0:	movq   $0x0,-0x10(%rdi)
+   a1da8:	mov    %rax,-0x8(%rdi)
+   a1dac:	movl   $0x1,0x178(%rdi)
+   a1db6:	xor    %eax,%eax
+   a1db8:	movl   $0x1,0x18c(%rdi)
+   a1dc2:	movq   $0x24,0x190(%rdi)
+   a1dcd:	mov    %r12,0x198(%rdi)
+   a1dd4:	movq   $0x0,0x1a0(%rdi)
+   a1ddf:	movb   $0x0,0x1a8(%rdi)
+   a1de6:	movb   $0x0,0x188(%rdi)
+   a1ded:	rep stos %rax,%es:(%rdi)
+   a1df0:	xor    %ecx,%ecx
+   a1df2:	mov    %cx,(%rdi)
+   a1df5:	movb   $0x0,0x2(%rdi)
+   a1df9:	lea    0xf3(%rbx),%rdi
+   a1e00:	lea    0xeb(%rbx),%rcx
+   a1e07:	movq   $0x0,0xeb(%rbx)
+   a1e12:	movq   $0x0,0x1b3(%rbx)
+   a1e1d:	and    $0xfffffffffffffff8,%rdi
+   a1e21:	sub    %rdi,%rcx
+   a1e24:	add    $0xd0,%ecx
+   a1e2a:	shr    $0x3,%ecx
+   a1e2d:	rep stos %rax,%es:(%rdi)
+   a1e30:	mov    $0xfffffffe,%edi
+   a1e35:	mov    %di,0xeb(%rbx)
+   a1e3c:	mov    %rbx,%rdi
+   a1e3f:	callq  2a600 <CtrlComponents::configProcess(int, char**)@plt>
+   a1e44:	add    $0x8,%rsp
+   a1e48:	pop    %rbx
+   a1e49:	pop    %rbp
+   a1e4a:	pop    %r12
+   a1e4c:	pop    %r13
+   a1e4e:	retq   
+   a1e4f:	mov    0x1f0(%rbx),%rdi
+   a1e56:	mov    %rax,%r13
+   a1e59:	cmp    %rdi,%r12
+   a1e5c:	je     a1e63 <CtrlComponents::CtrlComponents(int, char**)+0x103>
+   a1e5e:	callq  298a0 <operator delete(void*)@plt>
+   a1e63:	mov    0x48(%rbx),%rdi
+   a1e67:	test   %rdi,%rdi
+   a1e6a:	je     a1e71 <CtrlComponents::CtrlComponents(int, char**)+0x111>
+   a1e6c:	callq  29610 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()@plt>
+   a1e71:	mov    (%rbx),%rdi
+   a1e74:	cmp    %rdi,%rbp
+   a1e77:	je     a1e7e <CtrlComponents::CtrlComponents(int, char**)+0x11e>
+   a1e79:	callq  298a0 <operator delete(void*)@plt>
+   a1e7e:	mov    %r13,%rdi
+   a1e81:	callq  2a970 <_Unwind_Resume@plt>
+   a1e86:	nopw   %cs:0x0(%rax,%rax,1)
+
+00000000000a1e90 <CtrlComponents::writeData()>:
+   a1e90:	push   %rbp
+   a1e91:	mov    %rsp,%rbp
+   a1e94:	push   %r15
+   a1e96:	push   %r14
+   a1e98:	push   %r13
+   a1e9a:	push   %r12
+   a1e9c:	push   %rbx
+   a1e9d:	sub    $0x2b8,%rsp
+   a1ea4:	mov    %fs:0x28,%rax
+   a1ead:	mov    %rax,-0x38(%rbp)
+   a1eb1:	xor    %eax,%eax
+   a1eb3:	cmpb   $0x0,0x1e0(%rdi)
+   a1eba:	je     a1ef0 <CtrlComponents::writeData()+0x60>
+   a1ebc:	mov    0x28(%rdi),%rax
+   a1ec0:	mov    %rdi,%r14
+   a1ec3:	mov    0x8(%rax),%rdx
+   a1ec7:	mov    0x80(%rdx),%rax
+   a1ece:	sub    0x78(%rdx),%rax
+   a1ed2:	movabs $0xaaaaaaaaaaaaaaab,%rdx
+   a1edc:	sar    $0x3,%rax
+   a1ee0:	imul   %rdx,%rax
+   a1ee4:	test   %rax,%rax
+   a1ee7:	mov    %rax,-0x2a8(%rbp)
+   a1eee:	jne    a1f12 <CtrlComponents::writeData()+0x82>
+   a1ef0:	mov    -0x38(%rbp),%rax
+   a1ef4:	xor    %fs:0x28,%rax
+   a1efd:	jne    a27f4 <CtrlComponents::writeData()+0x964>
+   a1f03:	lea    -0x28(%rbp),%rsp
+   a1f07:	pop    %rbx
+   a1f08:	pop    %r12
+   a1f0a:	pop    %r13
+   a1f0c:	pop    %r14
+   a1f0e:	pop    %r15
+   a1f10:	pop    %rbp
+   a1f11:	retq   
+   a1f12:	mov    0x296f6f(%rip),%rbx        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1f19:	lea    0x75518(%rip),%rsi        # 117438 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x378>
+   a1f20:	mov    $0xf,%edx
+   a1f25:	mov    %rbx,%rdi
+   a1f28:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1f2d:	mov    (%rbx),%rax
+   a1f30:	mov    -0x18(%rax),%rax
+   a1f34:	mov    0xf0(%rax,%rbx,1),%rax
+   a1f3c:	test   %rax,%rax
+   a1f3f:	mov    %rax,%r15
+   a1f42:	je     a2826 <CtrlComponents::writeData()+0x996>
+   a1f48:	cmpb   $0x0,0x38(%rax)
+   a1f4c:	.byte 0xf
+   a1f4d:	test   %dl,(%rsi)
+   a1f4f:	(bad)  

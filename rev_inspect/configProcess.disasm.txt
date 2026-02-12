@@ -1,0 +1,1504 @@
+
+/home/sunxd/robustCapture/unitree_ws/z1_controller/lib/libZ1_x86_64.so:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000000a0180 <CtrlComponents::configProcess(int, char**)>:
+   a0180:	push   %r15
+   a0182:	push   %r14
+   a0184:	push   %r13
+   a0186:	push   %r12
+   a0188:	push   %rbp
+   a0189:	push   %rbx
+   a018a:	sub    $0x168,%rsp
+   a0191:	mov    %fs:0x28,%rax
+   a019a:	mov    %rax,0x158(%rsp)
+   a01a2:	xor    %eax,%eax
+   a01a4:	lea    0xa0(%rsp),%rax
+   a01ac:	mov    %rdi,(%rsp)
+   a01b0:	mov    %esi,0x10(%rsp)
+   a01b4:	mov    %rdx,0x20(%rsp)
+   a01b9:	mov    %rax,%rdi
+   a01bc:	mov    %rax,%rbx
+   a01bf:	mov    %rax,0x8(%rsp)
+   a01c4:	callq  296b0 <TiXmlDocument::TiXmlDocument()@plt>
+   a01c9:	lea    0x77129(%rip),%rsi        # 1172f9 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x239>
+   a01d0:	xor    %edx,%edx
+   a01d2:	mov    %rbx,%rdi
+   a01d5:	callq  2ad70 <TiXmlDocument::LoadFile(char const*, TiXmlEncoding)@plt>
+   a01da:	test   %al,%al
+   a01dc:	je     a0f30 <CtrlComponents::configProcess(int, char**)+0xdb0>
+   a01e2:	cmpl   $0x1,0x10(%rsp)
+   a01e7:	jle    a0f20 <CtrlComponents::configProcess(int, char**)+0xda0>
+   a01ed:	mov    0x20(%rsp),%rax
+   a01f2:	lea    0x77115(%rip),%rdi        # 11730e <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x24e>
+   a01f9:	mov    $0x3,%ecx
+   a01fe:	movb   $0x0,0x1f(%rsp)
+   a0203:	mov    0x8(%rax),%rdx
+   a0207:	mov    %rdx,%rsi
+   a020a:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a020c:	seta   %al
+   a020f:	sbb    $0x0,%al
+   a0211:	test   %al,%al
+   a0213:	jne    a08e0 <CtrlComponents::configProcess(int, char**)+0x760>
+   a0219:	mov    0x8(%rsp),%rdi
+   a021e:	callq  2a0b0 <TiXmlNode::FirstChildElement() const@plt>
+   a0223:	test   %rax,%rax
+   a0226:	mov    %rax,%rbx
+   a0229:	je     a0f50 <CtrlComponents::configProcess(int, char**)+0xdd0>
+   a022f:	mov    %rbx,%rdi
+   a0232:	callq  2a0b0 <TiXmlNode::FirstChildElement() const@plt>
+   a0237:	test   %rax,%rax
+   a023a:	mov    %rax,%rbx
+   a023d:	je     a0518 <CtrlComponents::configProcess(int, char**)+0x398>
+   a0243:	mov    0x38(%rax),%r13
+   a0247:	lea    0x110(%rsp),%r15
+   a024f:	jmpq   a02de <CtrlComponents::configProcess(int, char**)+0x15e>
+   a0254:	nopl   0x0(%rax)
+   a0258:	lea    0x770bf(%rip),%rdi        # 11731e <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x25e>
+   a025f:	mov    $0x5,%ecx
+   a0264:	mov    %rax,%rsi
+   a0267:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0269:	seta   %dl
+   a026c:	sbb    $0x0,%dl
+   a026f:	test   %dl,%dl
+   a0271:	je     a0420 <CtrlComponents::configProcess(int, char**)+0x2a0>
+   a0277:	lea    0x770aa(%rip),%rdi        # 117328 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x268>
+   a027e:	mov    $0xa,%ecx
+   a0283:	mov    %rax,%rsi
+   a0286:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0288:	seta   %dl
+   a028b:	sbb    $0x0,%dl
+   a028e:	test   %dl,%dl
+   a0290:	je     a0b00 <CtrlComponents::configProcess(int, char**)+0x980>
+   a0296:	lea    0x770d1(%rip),%rdi        # 11736e <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2ae>
+   a029d:	mov    $0x11,%ecx
+   a02a2:	mov    %rax,%rsi
+   a02a5:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a02a7:	seta   %dl
+   a02aa:	sbb    $0x0,%dl
+   a02ad:	test   %dl,%dl
+   a02af:	je     a0730 <CtrlComponents::configProcess(int, char**)+0x5b0>
+   a02b5:	lea    0x10(%r15),%rdx
+   a02b9:	cmp    %rdx,%rax
+   a02bc:	je     a02c6 <CtrlComponents::configProcess(int, char**)+0x146>
+   a02be:	mov    %rax,%rdi
+   a02c1:	callq  298a0 <operator delete(void*)@plt>
+   a02c6:	mov    %rbx,%rdi
+   a02c9:	callq  2a7b0 <TiXmlNode::NextSiblingElement() const@plt>
+   a02ce:	test   %rax,%rax
+   a02d1:	mov    %rax,%rbx
+   a02d4:	je     a0518 <CtrlComponents::configProcess(int, char**)+0x398>
+   a02da:	mov    0x38(%rbx),%r13
+   a02de:	lea    0x10(%r15),%rax
+   a02e2:	mov    %r13,%rbp
+   a02e5:	add    $0x10,%rbp
+   a02e9:	mov    %rax,0x110(%rsp)
+   a02f1:	je     a03f8 <CtrlComponents::configProcess(int, char**)+0x278>
+   a02f7:	mov    %rbp,%rdi
+   a02fa:	callq  28cf0 <strlen@plt>
+   a02ff:	cmp    $0xf,%rax
+   a0303:	mov    %rax,%r12
+   a0306:	mov    %rax,0x40(%rsp)
+   a030b:	ja     a03b0 <CtrlComponents::configProcess(int, char**)+0x230>
+   a0311:	cmp    $0x1,%rax
+   a0315:	jne    a0408 <CtrlComponents::configProcess(int, char**)+0x288>
+   a031b:	movzbl 0x10(%r13),%edx
+   a0320:	mov    %dl,0x120(%rsp)
+   a0327:	mov    0x110(%rsp),%rdx
+   a032f:	mov    %rax,0x118(%rsp)
+   a0337:	movb   $0x0,(%rdx,%rax,1)
+   a033b:	lea    0x76fd9(%rip),%rdi        # 11731b <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x25b>
+   a0342:	mov    0x110(%rsp),%rax
+   a034a:	mov    $0x3,%ecx
+   a034f:	mov    %rax,%rsi
+   a0352:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0354:	seta   %dl
+   a0357:	sbb    $0x0,%dl
+   a035a:	test   %dl,%dl
+   a035c:	jne    a0258 <CtrlComponents::configProcess(int, char**)+0xd8>
+   a0362:	mov    0x28(%rbx),%rdi
+   a0366:	mov    (%rdi),%rax
+   a0369:	callq  *0x70(%rax)
+   a036c:	mov    0x38(%rax),%rbp
+   a0370:	add    $0x10,%rbp
+   a0374:	mov    %rbp,%rdi
+   a0377:	callq  28cf0 <strlen@plt>
+   a037c:	mov    %rax,%r8
+   a037f:	mov    (%rsp),%rax
+   a0383:	mov    %rbp,%rcx
+   a0386:	xor    %esi,%esi
+   a0388:	mov    0x1f8(%rax),%rdx
+   a038f:	lea    0x1f0(%rax),%rdi
+   a0396:	callq  2a3f0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@plt>
+   a039b:	mov    0x110(%rsp),%rax
+   a03a3:	jmpq   a02b5 <CtrlComponents::configProcess(int, char**)+0x135>
+   a03a8:	nopl   0x0(%rax,%rax,1)
+   a03b0:	lea    0x40(%rsp),%rsi
+   a03b5:	xor    %edx,%edx
+   a03b7:	mov    %r15,%rdi
+   a03ba:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a03bf:	mov    0x40(%rsp),%rdx
+   a03c4:	mov    %rax,0x110(%rsp)
+   a03cc:	mov    %rdx,0x120(%rsp)
+   a03d4:	mov    %r12,%rdx
+   a03d7:	mov    %rbp,%rsi
+   a03da:	mov    %rax,%rdi
+   a03dd:	callq  29670 <memcpy@plt>
+   a03e2:	mov    0x40(%rsp),%rax
+   a03e7:	mov    0x110(%rsp),%rdx
+   a03ef:	jmpq   a032f <CtrlComponents::configProcess(int, char**)+0x1af>
+   a03f4:	nopl   0x0(%rax)
+   a03f8:	lea    0x3c141(%rip),%rdi        # dc540 <_fini+0xc>
+   a03ff:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a0404:	nopl   0x0(%rax)
+   a0408:	test   %rax,%rax
+   a040b:	jne    a1cf6 <CtrlComponents::configProcess(int, char**)+0x1b76>
+   a0411:	lea    0x10(%r15),%rdx
+   a0415:	jmpq   a032f <CtrlComponents::configProcess(int, char**)+0x1af>
+   a041a:	nopw   0x0(%rax,%rax,1)
+   a0420:	mov    0x28(%rbx),%rax
+   a0424:	lea    0x130(%rsp),%rbp
+   a042c:	lea    0x10(%rbp),%r14
+   a0430:	mov    0x38(%rax),%r13
+   a0434:	mov    %r14,0x130(%rsp)
+   a043c:	mov    %r13,%r12
+   a043f:	add    $0x10,%r12
+   a0443:	je     a1cbd <CtrlComponents::configProcess(int, char**)+0x1b3d>
+   a0449:	mov    %r12,%rdi
+   a044c:	callq  28cf0 <strlen@plt>
+   a0451:	cmp    $0xf,%rax
+   a0455:	mov    %rax,0x28(%rsp)
+   a045a:	mov    %rax,0x48(%rsp)
+   a045f:	ja     a0ed0 <CtrlComponents::configProcess(int, char**)+0xd50>
+   a0465:	cmp    $0x1,%rax
+   a0469:	jne    a1020 <CtrlComponents::configProcess(int, char**)+0xea0>
+   a046f:	movzbl 0x10(%r13),%edx
+   a0474:	mov    %dl,0x140(%rsp)
+   a047b:	mov    %rax,0x138(%rsp)
+   a0483:	movb   $0x0,(%r14,%rax,1)
+   a0488:	mov    0x130(%rsp),%r13
+   a0490:	callq  286f0 <__errno_location@plt>
+   a0495:	lea    0x50(%rsp),%rsi
+   a049a:	mov    (%rax),%r14d
+   a049d:	mov    $0xa,%edx
+   a04a2:	movl   $0x0,(%rax)
+   a04a8:	mov    %r13,%rdi
+   a04ab:	mov    %rax,%r12
+   a04ae:	callq  2a180 <strtol@plt>
+   a04b3:	cmp    0x50(%rsp),%r13
+   a04b8:	je     a1bb4 <CtrlComponents::configProcess(int, char**)+0x1a34>
+   a04be:	mov    (%r12),%ecx
+   a04c2:	cmp    $0x22,%ecx
+   a04c5:	je     a1b87 <CtrlComponents::configProcess(int, char**)+0x1a07>
+   a04cb:	mov    $0x80000000,%edx
+   a04d0:	mov    $0xffffffff,%esi
+   a04d5:	add    %rax,%rdx
+   a04d8:	cmp    %rsi,%rdx
+   a04db:	ja     a1b87 <CtrlComponents::configProcess(int, char**)+0x1a07>
+   a04e1:	test   %ecx,%ecx
+   a04e3:	jne    a04e9 <CtrlComponents::configProcess(int, char**)+0x369>
+   a04e5:	mov    %r14d,(%r12)
+   a04e9:	mov    0x130(%rsp),%rdi
+   a04f1:	mov    (%rsp),%rcx
+   a04f5:	add    $0x10,%rbp
+   a04f9:	cmp    %rbp,%rdi
+   a04fc:	mov    %eax,0x210(%rcx)
+   a0502:	je     a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a0508:	callq  298a0 <operator delete(void*)@plt>
+   a050d:	jmpq   a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a0512:	nopw   0x0(%rax,%rax,1)
+   a0518:	mov    0x8(%rsp),%rdi
+   a051d:	callq  29140 <TiXmlNode::Clear()@plt>
+   a0522:	cmpl   $0x1,0x10(%rsp)
+   a0527:	jle    a0990 <CtrlComponents::configProcess(int, char**)+0x810>
+   a052d:	mov    0x20(%rsp),%rax
+   a0532:	mov    0x8(%rax),%rax
+   a0536:	cmpb   $0x6b,(%rax)
+   a0539:	je     a0908 <CtrlComponents::configProcess(int, char**)+0x788>
+   a053f:	lea    0x76dc8(%rip),%rdi        # 11730e <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x24e>
+   a0546:	mov    $0x3,%ecx
+   a054b:	mov    %rax,%rsi
+   a054e:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0550:	seta   %dl
+   a0553:	sbb    $0x0,%dl
+   a0556:	test   %dl,%dl
+   a0558:	je     a0578 <CtrlComponents::configProcess(int, char**)+0x3f8>
+   a055a:	lea    0x76db0(%rip),%rdi        # 117311 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x251>
+   a0561:	mov    %rax,%rsi
+   a0564:	mov    $0xa,%ecx
+   a0569:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a056b:	seta   %al
+   a056e:	sbb    $0x0,%al
+   a0570:	test   %al,%al
+   a0572:	jne    a15b0 <CtrlComponents::configProcess(int, char**)+0x1430>
+   a0578:	lea    0x110(%rsp),%r15
+   a0580:	mov    0x298901(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a0587:	lea    0x76e04(%rip),%rsi        # 117392 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2d2>
+   a058e:	movl   $0x2e322e32,0x120(%rsp)
+   a0599:	mov    $0x17,%edx
+   a059e:	lea    0x10(%r15),%rax
+   a05a2:	mov    %r14,%rdi
+   a05a5:	mov    %rax,0x110(%rsp)
+   a05ad:	movb   $0x37,0x4(%rax)
+   a05b1:	movq   $0x5,0x118(%rsp)
+   a05bd:	movb   $0x0,0x125(%rsp)
+   a05c5:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a05ca:	mov    0x118(%rsp),%rdx
+   a05d2:	mov    0x110(%rsp),%rsi
+   a05da:	mov    %r14,%rdi
+   a05dd:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a05e2:	mov    %rax,%rbp
+   a05e5:	mov    (%rax),%rax
+   a05e8:	mov    -0x18(%rax),%rax
+   a05ec:	mov    0xf0(%rbp,%rax,1),%rbx
+   a05f4:	test   %rbx,%rbx
+   a05f7:	je     a1bc5 <CtrlComponents::configProcess(int, char**)+0x1a45>
+   a05fd:	cmpb   $0x0,0x38(%rbx)
+   a0601:	je     a1500 <CtrlComponents::configProcess(int, char**)+0x1380>
+   a0607:	movsbl 0x43(%rbx),%esi
+   a060b:	mov    %rbp,%rdi
+   a060e:	callq  28680 <std::ostream::put(char)@plt>
+   a0613:	mov    %rax,%rdi
+   a0616:	callq  29370 <std::ostream::flush()@plt>
+   a061b:	mov    (%rsp),%r13
+   a061f:	mov    $0x1e0,%edi
+   a0624:	mov    0x1f0(%r13),%rbp
+   a062b:	callq  299e0 <operator new(unsigned long)@plt>
+   a0630:	mov    0x210(%r13),%edx
+   a0637:	xor    %r8d,%r8d
+   a063a:	mov    $0x1388,%ecx
+   a063f:	mov    %rbp,%rsi
+   a0642:	mov    %rax,%rdi
+   a0645:	mov    %rax,%rbx
+   a0648:	callq  295e0 <IOUDP::IOUDP(char const*, unsigned int, unsigned long, bool)@plt>
+   a064d:	mov    0x20(%rbx),%rax
+   a0651:	mov    %rbx,0x28(%r13)
+   a0655:	cmpb   $0x0,0x8(%rax)
+   a0659:	jne    a0725 <CtrlComponents::configProcess(int, char**)+0x5a5>
+   a065f:	lea    0x130(%rsp),%rbp
+   a0667:	cmpb   $0x0,0x18(%rbx)
+   a066b:	movq   $0x0,0x138(%rsp)
+   a0677:	movb   $0x0,0x140(%rsp)
+   a067f:	mov    $0x5,%r8d
+   a0685:	lea    0x10(%rbp),%rax
+   a0689:	mov    %rax,0x130(%rsp)
+   a0691:	jne    a10b8 <CtrlComponents::configProcess(int, char**)+0xf38>
+   a0697:	lea    0x76d2b(%rip),%rcx        # 1173c9 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x309>
+   a069e:	xor    %edx,%edx
+   a06a0:	xor    %esi,%esi
+   a06a2:	mov    %rbp,%rdi
+   a06a5:	callq  2a3f0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@plt>
+   a06aa:	lea    0x76cff(%rip),%rsi        # 1173b0 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2f0>
+   a06b1:	mov    $0x18,%edx
+   a06b6:	mov    %r14,%rdi
+   a06b9:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a06be:	mov    0x138(%rsp),%rdx
+   a06c6:	mov    0x130(%rsp),%rsi
+   a06ce:	mov    %r14,%rdi
+   a06d1:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a06d6:	mov    %rax,%r12
+   a06d9:	mov    (%rax),%rax
+   a06dc:	mov    -0x18(%rax),%rax
+   a06e0:	mov    0xf0(%r12,%rax,1),%rbx
+   a06e8:	test   %rbx,%rbx
+   a06eb:	je     a1d4e <CtrlComponents::configProcess(int, char**)+0x1bce>
+   a06f1:	cmpb   $0x0,0x38(%rbx)
+   a06f5:	je     a1610 <CtrlComponents::configProcess(int, char**)+0x1490>
+   a06fb:	movsbl 0x43(%rbx),%esi
+   a06ff:	mov    %r12,%rdi
+   a0702:	callq  28680 <std::ostream::put(char)@plt>
+   a0707:	mov    %rax,%rdi
+   a070a:	callq  29370 <std::ostream::flush()@plt>
+   a070f:	mov    0x130(%rsp),%rdi
+   a0717:	add    $0x10,%rbp
+   a071b:	cmp    %rbp,%rdi
+   a071e:	je     a0725 <CtrlComponents::configProcess(int, char**)+0x5a5>
+   a0720:	callq  298a0 <operator delete(void*)@plt>
+   a0725:	xor    %edi,%edi
+   a0727:	callq  29d90 <exit@plt>
+   a072c:	nopl   0x0(%rax)
+   a0730:	mov    0x28(%rbx),%rax
+   a0734:	lea    0x130(%rsp),%rbp
+   a073c:	lea    0x10(%rbp),%r14
+   a0740:	mov    0x38(%rax),%r13
+   a0744:	mov    %r14,0x130(%rsp)
+   a074c:	mov    %r13,%r12
+   a074f:	add    $0x10,%r12
+   a0753:	je     a18db <CtrlComponents::configProcess(int, char**)+0x175b>
+   a0759:	mov    %r12,%rdi
+   a075c:	callq  28cf0 <strlen@plt>
+   a0761:	cmp    $0xf,%rax
+   a0765:	mov    %rax,0x28(%rsp)
+   a076a:	mov    %rax,0x78(%rsp)
+   a076f:	ja     a1038 <CtrlComponents::configProcess(int, char**)+0xeb8>
+   a0775:	cmp    $0x1,%rax
+   a0779:	jne    a1598 <CtrlComponents::configProcess(int, char**)+0x1418>
+   a077f:	movzbl 0x10(%r13),%edx
+   a0784:	mov    %dl,0x140(%rsp)
+   a078b:	mov    %rax,0x138(%rsp)
+   a0793:	movb   $0x0,(%r14,%rax,1)
+   a0798:	mov    0x130(%rsp),%r13
+   a07a0:	callq  286f0 <__errno_location@plt>
+   a07a5:	lea    0x80(%rsp),%rsi
+   a07ad:	mov    (%rax),%r14d
+   a07b0:	movl   $0x0,(%rax)
+   a07b6:	mov    %r13,%rdi
+   a07b9:	mov    %rax,%r12
+   a07bc:	callq  29560 <strtod@plt>
+   a07c1:	cmp    0x80(%rsp),%r13
+   a07c9:	je     a1cea <CtrlComponents::configProcess(int, char**)+0x1b6a>
+   a07cf:	mov    (%r12),%eax
+   a07d3:	cmp    $0x22,%eax
+   a07d6:	je     a1cc9 <CtrlComponents::configProcess(int, char**)+0x1b49>
+   a07dc:	test   %eax,%eax
+   a07de:	jne    a07e4 <CtrlComponents::configProcess(int, char**)+0x664>
+   a07e0:	mov    %r14d,(%r12)
+   a07e4:	mov    0x130(%rsp),%rdi
+   a07ec:	mov    (%rsp),%rax
+   a07f0:	add    $0x10,%rbp
+   a07f4:	cmp    %rbp,%rdi
+   a07f7:	movsd  %xmm0,0x50(%rax)
+   a07fc:	je     a080c <CtrlComponents::configProcess(int, char**)+0x68c>
+   a07fe:	callq  298a0 <operator delete(void*)@plt>
+   a0803:	mov    (%rsp),%rax
+   a0807:	movsd  0x50(%rax),%xmm0
+   a080c:	andpd  0x3c12c(%rip),%xmm0        # dc940 <typeinfo name for FSMState+0x60>
+   a0814:	mov    $0xd0,%edi
+   a0819:	mov    %rax,%r14
+   a081c:	movsd  %xmm0,0x50(%rax)
+   a0821:	callq  299e0 <operator new(unsigned long)@plt>
+   a0826:	mov    %rax,%rbp
+   a0829:	movabs $0x100000001,%rax
+   a0833:	mov    %rax,0x8(%rbp)
+   a0837:	mov    0x29841a(%rip),%rax        # 338c58 <vtable for std::_Sp_counted_ptr_inplace<Unitree_Gripper, std::allocator<Unitree_Gripper>, (__gnu_cxx::_Lock_policy)2>@@Base+0xe88>
+   a083e:	lea    0x10(%rbp),%r12
+   a0842:	movsd  0x50(%r14),%xmm2
+   a0848:	mov    %r12,%rdi
+   a084b:	add    $0x10,%rax
+   a084f:	movapd %xmm2,%xmm0
+   a0853:	mov    %rax,0x0(%rbp)
+   a0857:	movsd  %xmm2,0x28(%rsp)
+   a085d:	callq  2ace0 <Unitree_Gripper::Unitree_Gripper(double)@plt>
+   a0862:	mov    0x0(%rbp),%rax
+   a0866:	mov    0x20(%rax),%rax
+   a086a:	cmp    0x2984e7(%rip),%rax        # 338d58 <std::_Sp_counted_ptr_inplace<Unitree_Gripper, std::allocator<Unitree_Gripper>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)@@Base+0x295df8>
+   a0871:	jne    a1740 <CtrlComponents::configProcess(int, char**)+0x15c0>
+   a0877:	mov    (%rsp),%rax
+   a087b:	mov    %r12,0x40(%rax)
+   a087f:	mov    0x48(%rax),%r12
+   a0883:	mov    %rbp,0x48(%rax)
+   a0887:	test   %r12,%r12
+   a088a:	je     a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a0890:	cmpq   $0x0,0x2986d0(%rip)        # 338f68 <__pthread_key_create@GLIBC_2.2.5>
+   a0898:	je     a1080 <CtrlComponents::configProcess(int, char**)+0xf00>
+   a089e:	lock subl $0x1,0x8(%r12)
+   a08a5:	jne    a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a08ab:	mov    (%r12),%rax
+   a08af:	mov    %r12,%rdi
+   a08b2:	callq  *0x10(%rax)
+   a08b5:	mov    $0xffffffff,%eax
+   a08ba:	lock xadd %eax,0xc(%r12)
+   a08c1:	cmp    $0x1,%eax
+   a08c4:	jne    a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a08ca:	mov    (%r12),%rax
+   a08ce:	mov    %r12,%rdi
+   a08d1:	callq  *0x18(%rax)
+   a08d4:	jmpq   a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a08d9:	nopl   0x0(%rax)
+   a08e0:	lea    0x76a2a(%rip),%rdi        # 117311 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x251>
+   a08e7:	mov    $0xa,%ecx
+   a08ec:	mov    %rdx,%rsi
+   a08ef:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a08f1:	seta   %al
+   a08f4:	sbb    $0x0,%al
+   a08f6:	test   %al,%al
+   a08f8:	setne  0x1f(%rsp)
+   a08fd:	jmpq   a0219 <CtrlComponents::configProcess(int, char**)+0x99>
+   a0902:	nopw   0x0(%rax,%rax,1)
+   a0908:	cmpl   $0x3,0x10(%rsp)
+   a090d:	mov    (%rsp),%rax
+   a0911:	movl   $0x0,0x1d0(%rax)
+   a091b:	jne    a0990 <CtrlComponents::configProcess(int, char**)+0x810>
+   a091d:	mov    0x20(%rsp),%rax
+   a0922:	mov    0x10(%rax),%rax
+   a0926:	cmpb   $0x70,(%rax)
+   a0929:	jne    a0990 <CtrlComponents::configProcess(int, char**)+0x810>
+   a092b:	mov    (%rsp),%rax
+   a092f:	mov    0x298552(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a0936:	lea    0x76a42(%rip),%rsi        # 11737f <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2bf>
+   a093d:	mov    $0x12,%edx
+   a0942:	movb   $0x1,0x1e0(%rax)
+   a0949:	mov    %r14,%rdi
+   a094c:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a0951:	mov    (%r14),%rax
+   a0954:	mov    -0x18(%rax),%rax
+   a0958:	mov    0xf0(%rax,%r14,1),%rbx
+   a0960:	test   %rbx,%rbx
+   a0963:	je     a1c31 <CtrlComponents::configProcess(int, char**)+0x1ab1>
+   a0969:	cmpb   $0x0,0x38(%rbx)
+   a096d:	je     a1b00 <CtrlComponents::configProcess(int, char**)+0x1980>
+   a0973:	movsbl 0x43(%rbx),%esi
+   a0977:	mov    %r14,%rdi
+   a097a:	callq  28680 <std::ostream::put(char)@plt>
+   a097f:	mov    %rax,%rdi
+   a0982:	callq  29370 <std::ostream::flush()@plt>
+   a0987:	nopw   0x0(%rax,%rax,1)
+   a0990:	mov    0x8(%rsp),%rbx
+   a0995:	lea    0x76a33(%rip),%rsi        # 1173cf <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x30f>
+   a099c:	xor    %edx,%edx
+   a099e:	mov    %rbx,%rdi
+   a09a1:	callq  2ad70 <TiXmlDocument::LoadFile(char const*, TiXmlEncoding)@plt>
+   a09a6:	test   %al,%al
+   a09a8:	je     a0f80 <CtrlComponents::configProcess(int, char**)+0xe00>
+   a09ae:	mov    %rbx,%rdi
+   a09b1:	callq  2a0b0 <TiXmlNode::FirstChildElement() const@plt>
+   a09b6:	test   %rax,%rax
+   a09b9:	mov    %rax,%rbx
+   a09bc:	je     a10e8 <CtrlComponents::configProcess(int, char**)+0xf68>
+   a09c2:	mov    %rbx,%rdi
+   a09c5:	callq  2a0b0 <TiXmlNode::FirstChildElement() const@plt>
+   a09ca:	test   %rax,%rax
+   a09cd:	mov    %rax,%rbx
+   a09d0:	je     a0fe8 <CtrlComponents::configProcess(int, char**)+0xe68>
+   a09d6:	mov    0x38(%rax),%r13
+   a09da:	lea    0x110(%rsp),%r15
+   a09e2:	lea    0x10(%r15),%rax
+   a09e6:	mov    %r13,%r12
+   a09e9:	add    $0x10,%r12
+   a09ed:	mov    %rax,0x110(%rsp)
+   a09f5:	je     a0aeb <CtrlComponents::configProcess(int, char**)+0x96b>
+   a09fb:	lea    0x130(%rsp),%rax
+   a0a03:	lea    0x769d8(%rip),%rbp        # 1173e2 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x322>
+   a0a0a:	mov    %rax,0x20(%rsp)
+   a0a0f:	lea    0x140(%rsp),%rax
+   a0a17:	mov    %rax,0x10(%rsp)
+   a0a1c:	nopl   0x0(%rax)
+   a0a20:	mov    %r12,%rdi
+   a0a23:	callq  28cf0 <strlen@plt>
+   a0a28:	cmp    $0xf,%rax
+   a0a2c:	mov    %rax,%r14
+   a0a2f:	mov    %rax,0x88(%rsp)
+   a0a37:	ja     a1178 <CtrlComponents::configProcess(int, char**)+0xff8>
+   a0a3d:	cmp    $0x1,%rax
+   a0a41:	jne    a1378 <CtrlComponents::configProcess(int, char**)+0x11f8>
+   a0a47:	movzbl 0x10(%r13),%edx
+   a0a4c:	mov    %dl,0x120(%rsp)
+   a0a53:	mov    0x110(%rsp),%rdx
+   a0a5b:	mov    %rax,0x118(%rsp)
+   a0a63:	movb   $0x0,(%rdx,%rax,1)
+   a0a67:	mov    $0x9,%ecx
+   a0a6c:	mov    0x110(%rsp),%rax
+   a0a74:	mov    %rbp,%rdi
+   a0a77:	mov    %rax,%rsi
+   a0a7a:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0a7c:	seta   %dl
+   a0a7f:	sbb    $0x0,%dl
+   a0a82:	test   %dl,%dl
+   a0a84:	je     a1100 <CtrlComponents::configProcess(int, char**)+0xf80>
+   a0a8a:	lea    0x7699a(%rip),%rdi        # 11742b <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x36b>
+   a0a91:	mov    $0xd,%ecx
+   a0a96:	mov    %rax,%rsi
+   a0a99:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0a9b:	seta   %dl
+   a0a9e:	sbb    $0x0,%dl
+   a0aa1:	test   %dl,%dl
+   a0aa3:	je     a11c8 <CtrlComponents::configProcess(int, char**)+0x1048>
+   a0aa9:	lea    0x10(%r15),%rdx
+   a0aad:	cmp    %rdx,%rax
+   a0ab0:	je     a0aba <CtrlComponents::configProcess(int, char**)+0x93a>
+   a0ab2:	mov    %rax,%rdi
+   a0ab5:	callq  298a0 <operator delete(void*)@plt>
+   a0aba:	mov    %rbx,%rdi
+   a0abd:	callq  2a7b0 <TiXmlNode::NextSiblingElement() const@plt>
+   a0ac2:	test   %rax,%rax
+   a0ac5:	mov    %rax,%rbx
+   a0ac8:	je     a0fe8 <CtrlComponents::configProcess(int, char**)+0xe68>
+   a0ace:	mov    0x38(%rbx),%r13
+   a0ad2:	lea    0x10(%r15),%rax
+   a0ad6:	mov    %rax,0x110(%rsp)
+   a0ade:	mov    %r13,%r12
+   a0ae1:	add    $0x10,%r12
+   a0ae5:	jne    a0a20 <CtrlComponents::configProcess(int, char**)+0x8a0>
+   a0aeb:	lea    0x3ba4e(%rip),%rdi        # dc540 <_fini+0xc>
+   a0af2:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a0af7:	nopw   0x0(%rax,%rax,1)
+   a0b00:	mov    %rbx,%rdi
+   a0b03:	callq  2a0b0 <TiXmlNode::FirstChildElement() const@plt>
+   a0b08:	test   %rax,%rax
+   a0b0b:	mov    %rax,%rbp
+   a0b0e:	je     a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a0b14:	lea    0x130(%rsp),%rax
+   a0b1c:	mov    %rax,0x30(%rsp)
+   a0b21:	lea    0x140(%rsp),%rax
+   a0b29:	mov    %rax,0x28(%rsp)
+   a0b2e:	jmp    a0b98 <CtrlComponents::configProcess(int, char**)+0xa18>
+   a0b30:	mov    0x28(%rbp),%rax
+   a0b34:	lea    0x767fc(%rip),%rdi        # 117337 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x277>
+   a0b3b:	mov    $0x2,%ecx
+   a0b40:	mov    0x38(%rax),%rax
+   a0b44:	add    $0x10,%rax
+   a0b48:	mov    %rax,%rsi
+   a0b4b:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0b4d:	seta   %dl
+   a0b50:	sbb    $0x0,%dl
+   a0b53:	test   %dl,%dl
+   a0b55:	je     a0ce0 <CtrlComponents::configProcess(int, char**)+0xb60>
+   a0b5b:	lea    0x76805(%rip),%rdi        # 117367 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2a7>
+   a0b62:	mov    %rax,%rsi
+   a0b65:	mov    $0x2,%ecx
+   a0b6a:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0b6c:	seta   %al
+   a0b6f:	sbb    $0x0,%al
+   a0b71:	test   %al,%al
+   a0b73:	jne    a0f68 <CtrlComponents::configProcess(int, char**)+0xde8>
+   a0b79:	mov    (%rsp),%rax
+   a0b7d:	movb   $0x0,0x1d5(%rax)
+   a0b84:	mov    %rbp,%rdi
+   a0b87:	callq  2a7b0 <TiXmlNode::NextSiblingElement() const@plt>
+   a0b8c:	test   %rax,%rax
+   a0b8f:	mov    %rax,%rbp
+   a0b92:	je     a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a0b98:	mov    0x38(%rbp),%rax
+   a0b9c:	lea    0x7678f(%rip),%rdi        # 117332 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x272>
+   a0ba3:	mov    $0x5,%ecx
+   a0ba8:	add    $0x10,%rax
+   a0bac:	mov    %rax,%rsi
+   a0baf:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0bb1:	seta   %dl
+   a0bb4:	sbb    $0x0,%dl
+   a0bb7:	test   %dl,%dl
+   a0bb9:	je     a0b30 <CtrlComponents::configProcess(int, char**)+0x9b0>
+   a0bbf:	lea    0x767a3(%rip),%rdi        # 117369 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2a9>
+   a0bc6:	mov    %rax,%rsi
+   a0bc9:	mov    $0x5,%ecx
+   a0bce:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0bd0:	seta   %al
+   a0bd3:	sbb    $0x0,%al
+   a0bd5:	test   %al,%al
+   a0bd7:	jne    a0b84 <CtrlComponents::configProcess(int, char**)+0xa04>
+   a0bd9:	mov    0x28(%rbp),%rax
+   a0bdd:	mov    0x38(%rax),%r14
+   a0be1:	mov    0x28(%rsp),%rax
+   a0be6:	mov    %r14,%r12
+   a0be9:	mov    %rax,0x130(%rsp)
+   a0bf1:	add    $0x10,%r12
+   a0bf5:	je     a1ca0 <CtrlComponents::configProcess(int, char**)+0x1b20>
+   a0bfb:	mov    %r12,%rdi
+   a0bfe:	callq  28cf0 <strlen@plt>
+   a0c03:	cmp    $0xf,%rax
+   a0c07:	mov    %rax,%r13
+   a0c0a:	mov    %rax,0x68(%rsp)
+   a0c0f:	ja     a1530 <CtrlComponents::configProcess(int, char**)+0x13b0>
+   a0c15:	cmp    $0x1,%rax
+   a0c19:	jne    a10d0 <CtrlComponents::configProcess(int, char**)+0xf50>
+   a0c1f:	movzbl 0x10(%r14),%edx
+   a0c24:	mov    %dl,0x140(%rsp)
+   a0c2b:	mov    0x28(%rsp),%rdx
+   a0c30:	mov    %rax,0x138(%rsp)
+   a0c38:	movb   $0x0,(%rdx,%rax,1)
+   a0c3c:	mov    0x130(%rsp),%r13
+   a0c44:	callq  286f0 <__errno_location@plt>
+   a0c49:	lea    0x70(%rsp),%rsi
+   a0c4e:	mov    (%rax),%r14d
+   a0c51:	movl   $0x0,(%rax)
+   a0c57:	mov    %r13,%rdi
+   a0c5a:	mov    %rax,%r12
+   a0c5d:	callq  29560 <strtod@plt>
+   a0c62:	cmp    0x70(%rsp),%r13
+   a0c67:	je     a1bd6 <CtrlComponents::configProcess(int, char**)+0x1a56>
+   a0c6d:	mov    (%r12),%eax
+   a0c71:	cmp    $0x22,%eax
+   a0c74:	je     a1bca <CtrlComponents::configProcess(int, char**)+0x1a4a>
+   a0c7a:	test   %eax,%eax
+   a0c7c:	jne    a0c82 <CtrlComponents::configProcess(int, char**)+0xb02>
+   a0c7e:	mov    %r14d,(%r12)
+   a0c82:	andpd  0x3bcb6(%rip),%xmm0        # dc940 <typeinfo name for FSMState+0x60>
+   a0c8a:	mov    0x130(%rsp),%rdi
+   a0c92:	cmp    0x28(%rsp),%rdi
+   a0c97:	mov    (%rsp),%rax
+   a0c9b:	movsd  %xmm0,0x218(%rax)
+   a0ca3:	je     a13d0 <CtrlComponents::configProcess(int, char**)+0x1250>
+   a0ca9:	callq  298a0 <operator delete(void*)@plt>
+   a0cae:	mov    (%rsp),%rax
+   a0cb2:	pxor   %xmm1,%xmm1
+   a0cb6:	movsd  0x218(%rax),%xmm0
+   a0cbe:	ucomisd %xmm0,%xmm1
+   a0cc2:	jbe    a13d0 <CtrlComponents::configProcess(int, char**)+0x1250>
+   a0cc8:	pxor   %xmm0,%xmm0
+   a0ccc:	movsd  %xmm0,0x218(%rax)
+   a0cd4:	jmpq   a0b84 <CtrlComponents::configProcess(int, char**)+0xa04>
+   a0cd9:	nopl   0x0(%rax)
+   a0ce0:	mov    (%rsp),%rax
+   a0ce4:	mov    0x29819d(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a0ceb:	lea    0x76647(%rip),%rsi        # 117339 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x279>
+   a0cf2:	mov    $0x11,%edx
+   a0cf7:	movb   $0x1,0x1d5(%rax)
+   a0cfe:	mov    %r14,%rdi
+   a0d01:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a0d06:	mov    %rbp,%rdi
+   a0d09:	callq  2a7b0 <TiXmlNode::NextSiblingElement() const@plt>
+   a0d0e:	mov    %rax,%rbp
+   a0d11:	mov    0x38(%rax),%rax
+   a0d15:	lea    0x7662f(%rip),%rdi        # 11734b <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x28b>
+   a0d1c:	mov    $0x7,%ecx
+   a0d21:	lea    0x10(%rax),%rsi
+   a0d25:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a0d27:	seta   %al
+   a0d2a:	sbb    $0x0,%al
+   a0d2c:	test   %al,%al
+   a0d2e:	jne    a0b84 <CtrlComponents::configProcess(int, char**)+0xa04>
+   a0d34:	mov    0x28(%rbp),%rax
+   a0d38:	mov    0x38(%rax),%r13
+   a0d3c:	mov    0x28(%rsp),%rax
+   a0d41:	mov    %r13,%r12
+   a0d44:	mov    %rax,0x130(%rsp)
+   a0d4c:	add    $0x10,%r12
+   a0d50:	je     a1c85 <CtrlComponents::configProcess(int, char**)+0x1b05>
+   a0d56:	mov    %r12,%rdi
+   a0d59:	callq  28cf0 <strlen@plt>
+   a0d5e:	cmp    $0xf,%rax
+   a0d62:	mov    %rax,0x38(%rsp)
+   a0d67:	mov    %rax,0x58(%rsp)
+   a0d6c:	ja     a191f <CtrlComponents::configProcess(int, char**)+0x179f>
+   a0d72:	cmp    $0x1,%rax
+   a0d76:	jne    a1aac <CtrlComponents::configProcess(int, char**)+0x192c>
+   a0d7c:	movzbl 0x10(%r13),%edx
+   a0d81:	mov    %dl,0x140(%rsp)
+   a0d88:	mov    0x28(%rsp),%rdx
+   a0d8d:	mov    %rax,0x138(%rsp)
+   a0d95:	movb   $0x0,(%rdx,%rax,1)
+   a0d99:	mov    0x130(%rsp),%r12
+   a0da1:	callq  286f0 <__errno_location@plt>
+   a0da6:	mov    %rax,%r13
+   a0da9:	mov    (%rax),%eax
+   a0dab:	lea    0x60(%rsp),%rsi
+   a0db0:	movl   $0x0,0x0(%r13)
+   a0db8:	mov    %r12,%rdi
+   a0dbb:	mov    %eax,0x38(%rsp)
+   a0dbf:	callq  29560 <strtod@plt>
+   a0dc4:	cmp    0x60(%rsp),%r12
+   a0dc9:	je     a1d18 <CtrlComponents::configProcess(int, char**)+0x1b98>
+   a0dcf:	mov    0x0(%r13),%eax
+   a0dd3:	cmp    $0x22,%eax
+   a0dd6:	je     a1d0c <CtrlComponents::configProcess(int, char**)+0x1b8c>
+   a0ddc:	test   %eax,%eax
+   a0dde:	jne    a0de8 <CtrlComponents::configProcess(int, char**)+0xc68>
+   a0de0:	mov    0x38(%rsp),%eax
+   a0de4:	mov    %eax,0x0(%r13)
+   a0de8:	mov    0x130(%rsp),%rdi
+   a0df0:	cmp    0x28(%rsp),%rdi
+   a0df5:	mov    (%rsp),%rax
+   a0df9:	movsd  %xmm0,0x1d8(%rax)
+   a0e01:	je     a0e14 <CtrlComponents::configProcess(int, char**)+0xc94>
+   a0e03:	callq  298a0 <operator delete(void*)@plt>
+   a0e08:	mov    (%rsp),%rax
+   a0e0c:	movsd  0x1d8(%rax),%xmm0
+   a0e14:	movsd  0x3bafc(%rip),%xmm1        # dc918 <typeinfo name for FSMState+0x38>
+   a0e1c:	ucomisd %xmm0,%xmm1
+   a0e20:	ja     a188f <CtrlComponents::configProcess(int, char**)+0x170f>
+   a0e26:	movsd  0x7685a(%rip),%xmm1        # 117688 <typeinfo name for std::_Sp_counted_ptr_inplace<Unitree_Gripper, std::allocator<Unitree_Gripper>, (__gnu_cxx::_Lock_policy)2>+0xa8>
+   a0e2e:	minsd  %xmm0,%xmm1
+   a0e32:	movapd %xmm1,%xmm0
+   a0e36:	mov    (%rsp),%r13
+   a0e3a:	lea    0x76511(%rip),%rsi        # 117352 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x292>
+   a0e41:	mov    $0x10,%edx
+   a0e46:	mov    %r14,%rdi
+   a0e49:	movsd  %xmm0,0x1d8(%r13)
+   a0e52:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a0e57:	movsd  0x1d8(%r13),%xmm3
+   a0e60:	mov    %r14,%rdi
+   a0e63:	movapd %xmm3,%xmm0
+   a0e67:	movsd  %xmm3,0x38(%rsp)
+   a0e6d:	callq  2a5b0 <std::ostream& std::ostream::_M_insert<double>(double)@plt>
+   a0e72:	lea    0x764ea(%rip),%rsi        # 117363 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2a3>
+   a0e79:	mov    $0x3,%edx
+   a0e7e:	mov    %rax,%rdi
+   a0e81:	mov    %rax,%r12
+   a0e84:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a0e89:	mov    (%r12),%rax
+   a0e8d:	mov    -0x18(%rax),%rax
+   a0e91:	mov    0xf0(%r12,%rax,1),%r13
+   a0e99:	test   %r13,%r13
+   a0e9c:	je     a1d07 <CtrlComponents::configProcess(int, char**)+0x1b87>
+   a0ea2:	cmpb   $0x0,0x38(%r13)
+   a0ea7:	je     a1860 <CtrlComponents::configProcess(int, char**)+0x16e0>
+   a0ead:	movsbl 0x43(%r13),%esi
+   a0eb2:	mov    %r12,%rdi
+   a0eb5:	callq  28680 <std::ostream::put(char)@plt>
+   a0eba:	mov    %rax,%rdi
+   a0ebd:	callq  29370 <std::ostream::flush()@plt>
+   a0ec2:	jmpq   a0b84 <CtrlComponents::configProcess(int, char**)+0xa04>
+   a0ec7:	nopw   0x0(%rax,%rax,1)
+   a0ed0:	lea    0x48(%rsp),%rsi
+   a0ed5:	xor    %edx,%edx
+   a0ed7:	mov    %rbp,%rdi
+   a0eda:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a0edf:	mov    0x48(%rsp),%rdx
+   a0ee4:	mov    %rax,0x130(%rsp)
+   a0eec:	mov    %rdx,0x140(%rsp)
+   a0ef4:	mov    0x28(%rsp),%rdx
+   a0ef9:	mov    %r12,%rsi
+   a0efc:	mov    %rax,%rdi
+   a0eff:	callq  29670 <memcpy@plt>
+   a0f04:	mov    0x48(%rsp),%rax
+   a0f09:	mov    0x130(%rsp),%r14
+   a0f11:	jmpq   a047b <CtrlComponents::configProcess(int, char**)+0x2fb>
+   a0f16:	nopw   %cs:0x0(%rax,%rax,1)
+   a0f20:	movb   $0x1,0x1f(%rsp)
+   a0f25:	jmpq   a0219 <CtrlComponents::configProcess(int, char**)+0x99>
+   a0f2a:	nopw   0x0(%rax,%rax,1)
+   a0f30:	mov    0xf8(%rsp),%rax
+   a0f38:	lea    0x10(%rax),%rdi
+   a0f3c:	callq  296c0 <perror@plt>
+   a0f41:	jmpq   a01e2 <CtrlComponents::configProcess(int, char**)+0x62>
+   a0f46:	nopw   %cs:0x0(%rax,%rax,1)
+   a0f50:	lea    0x761e1(%rip),%rdi        # 117138 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x78>
+   a0f57:	callq  296c0 <perror@plt>
+   a0f5c:	jmpq   a022f <CtrlComponents::configProcess(int, char**)+0xaf>
+   a0f61:	nopl   0x0(%rax)
+   a0f68:	lea    0x761f1(%rip),%rdi        # 117160 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0xa0>
+   a0f6f:	callq  296c0 <perror@plt>
+   a0f74:	jmpq   a0b79 <CtrlComponents::configProcess(int, char**)+0x9f9>
+   a0f79:	nopl   0x0(%rax)
+   a0f80:	mov    0x297c99(%rip),%rax        # 338c20 <vtable for TiXmlDocument@@Base+0x520>
+   a0f87:	mov    0xf8(%rsp),%rdi
+   a0f8f:	add    $0x10,%rax
+   a0f93:	test   %rdi,%rdi
+   a0f96:	mov    %rax,0xa0(%rsp)
+   a0f9e:	je     a0fae <CtrlComponents::configProcess(int, char**)+0xe2e>
+   a0fa0:	cmp    0x297f99(%rip),%rdi        # 338f40 <TiXmlString::nullrep_@@Base-0x16c0>
+   a0fa7:	je     a0fae <CtrlComponents::configProcess(int, char**)+0xe2e>
+   a0fa9:	callq  29ed0 <operator delete[](void*)@plt>
+   a0fae:	mov    0x8(%rsp),%rdi
+   a0fb3:	callq  28880 <TiXmlNode::~TiXmlNode()@plt>
+   a0fb8:	mov    0x158(%rsp),%rax
+   a0fc0:	xor    %fs:0x28,%rax
+   a0fc9:	jne    a1b2e <CtrlComponents::configProcess(int, char**)+0x19ae>
+   a0fcf:	add    $0x168,%rsp
+   a0fd6:	pop    %rbx
+   a0fd7:	pop    %rbp
+   a0fd8:	pop    %r12
+   a0fda:	pop    %r13
+   a0fdc:	pop    %r14
+   a0fde:	pop    %r15
+   a0fe0:	retq   
+   a0fe1:	nopl   0x0(%rax)
+   a0fe8:	mov    0x8(%rsp),%rdi
+   a0fed:	callq  29140 <TiXmlNode::Clear()@plt>
+   a0ff2:	mov    0x297c27(%rip),%rax        # 338c20 <vtable for TiXmlDocument@@Base+0x520>
+   a0ff9:	mov    0xf8(%rsp),%rdi
+   a1001:	add    $0x10,%rax
+   a1005:	cmp    0x297f34(%rip),%rdi        # 338f40 <TiXmlString::nullrep_@@Base-0x16c0>
+   a100c:	mov    %rax,0xa0(%rsp)
+   a1014:	je     a0fae <CtrlComponents::configProcess(int, char**)+0xe2e>
+   a1016:	test   %rdi,%rdi
+   a1019:	jne    a0fa9 <CtrlComponents::configProcess(int, char**)+0xe29>
+   a101b:	jmp    a0fae <CtrlComponents::configProcess(int, char**)+0xe2e>
+   a101d:	nopl   (%rax)
+   a1020:	cmpq   $0x0,0x28(%rsp)
+   a1026:	je     a047b <CtrlComponents::configProcess(int, char**)+0x2fb>
+   a102c:	mov    %r14,%rax
+   a102f:	jmpq   a0ef4 <CtrlComponents::configProcess(int, char**)+0xd74>
+   a1034:	nopl   0x0(%rax)
+   a1038:	lea    0x78(%rsp),%rsi
+   a103d:	xor    %edx,%edx
+   a103f:	mov    %rbp,%rdi
+   a1042:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a1047:	mov    0x78(%rsp),%rdx
+   a104c:	mov    %rax,0x130(%rsp)
+   a1054:	mov    %rdx,0x140(%rsp)
+   a105c:	mov    0x28(%rsp),%rdx
+   a1061:	mov    %r12,%rsi
+   a1064:	mov    %rax,%rdi
+   a1067:	callq  29670 <memcpy@plt>
+   a106c:	mov    0x78(%rsp),%rax
+   a1071:	mov    0x130(%rsp),%r14
+   a1079:	jmpq   a078b <CtrlComponents::configProcess(int, char**)+0x60b>
+   a107e:	xchg   %ax,%ax
+   a1080:	mov    0x8(%r12),%eax
+   a1085:	lea    -0x1(%rax),%edx
+   a1088:	cmp    $0x1,%eax
+   a108b:	mov    %edx,0x8(%r12)
+   a1090:	jne    a039b <CtrlComponents::configProcess(int, char**)+0x21b>
+   a1096:	mov    (%r12),%rax
+   a109a:	mov    %r12,%rdi
+   a109d:	callq  *0x10(%rax)
+   a10a0:	mov    0xc(%r12),%eax
+   a10a5:	lea    -0x1(%rax),%edx
+   a10a8:	mov    %edx,0xc(%r12)
+   a10ad:	jmpq   a08c1 <CtrlComponents::configProcess(int, char**)+0x741>
+   a10b2:	nopw   0x0(%rax,%rax,1)
+   a10b8:	lea    0x762eb(%rip),%rcx        # 1173aa <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x2ea>
+   a10bf:	xor    %edx,%edx
+   a10c1:	xor    %esi,%esi
+   a10c3:	mov    %rbp,%rdi
+   a10c6:	callq  2a3f0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@plt>
+   a10cb:	jmpq   a06aa <CtrlComponents::configProcess(int, char**)+0x52a>
+   a10d0:	test   %rax,%rax
+   a10d3:	jne    a1d44 <CtrlComponents::configProcess(int, char**)+0x1bc4>
+   a10d9:	mov    0x28(%rsp),%rdx
+   a10de:	jmpq   a0c30 <CtrlComponents::configProcess(int, char**)+0xab0>
+   a10e3:	nopl   0x0(%rax,%rax,1)
+   a10e8:	lea    0x76049(%rip),%rdi        # 117138 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x78>
+   a10ef:	callq  296c0 <perror@plt>
+   a10f4:	jmpq   a09c2 <CtrlComponents::configProcess(int, char**)+0x842>
+   a10f9:	nopl   0x0(%rax)
+   a1100:	mov    0x28(%rbx),%rax
+   a1104:	mov    0x38(%rax),%r12
+   a1108:	add    $0x10,%r12
+   a110c:	mov    %r12,%rdi
+   a110f:	callq  28cf0 <strlen@plt>
+   a1114:	mov    0x118(%rsp),%rdx
+   a111c:	mov    %rax,%r8
+   a111f:	mov    %r12,%rcx
+   a1122:	xor    %esi,%esi
+   a1124:	mov    %r15,%rdi
+   a1127:	callq  2a3f0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@plt>
+   a112c:	mov    0x110(%rsp),%rax
+   a1134:	lea    0x762b0(%rip),%rdi        # 1173eb <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x32b>
+   a113b:	mov    $0x4,%ecx
+   a1140:	mov    %rax,%rsi
+   a1143:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a1145:	seta   %dl
+   a1148:	sbb    $0x0,%dl
+   a114b:	test   %dl,%dl
+   a114d:	jne    a1390 <CtrlComponents::configProcess(int, char**)+0x1210>
+   a1153:	cmpb   $0x0,0x1f(%rsp)
+   a1158:	jne    a1480 <CtrlComponents::configProcess(int, char**)+0x1300>
+   a115e:	mov    (%rsp),%rcx
+   a1162:	movq   $0x24,0x1e8(%rcx)
+   a116d:	jmpq   a0aa9 <CtrlComponents::configProcess(int, char**)+0x929>
+   a1172:	nopw   0x0(%rax,%rax,1)
+   a1178:	lea    0x88(%rsp),%rsi
+   a1180:	xor    %edx,%edx
+   a1182:	mov    %r15,%rdi
+   a1185:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a118a:	mov    0x88(%rsp),%rdx
+   a1192:	mov    %rax,0x110(%rsp)
+   a119a:	mov    %rdx,0x120(%rsp)
+   a11a2:	mov    %r14,%rdx
+   a11a5:	mov    %r12,%rsi
+   a11a8:	mov    %rax,%rdi
+   a11ab:	callq  29670 <memcpy@plt>
+   a11b0:	mov    0x88(%rsp),%rax
+   a11b8:	mov    0x110(%rsp),%rdx
+   a11c0:	jmpq   a0a5b <CtrlComponents::configProcess(int, char**)+0x8db>
+   a11c5:	nopl   (%rax)
+   a11c8:	mov    0x28(%rbx),%rax
+   a11cc:	mov    0x38(%rax),%r14
+   a11d0:	mov    0x10(%rsp),%rax
+   a11d5:	mov    %r14,%r12
+   a11d8:	mov    %rax,0x130(%rsp)
+   a11e0:	add    $0x10,%r12
+   a11e4:	je     a1cac <CtrlComponents::configProcess(int, char**)+0x1b2c>
+   a11ea:	mov    %r12,%rdi
+   a11ed:	callq  28cf0 <strlen@plt>
+   a11f2:	cmp    $0xf,%rax
+   a11f6:	mov    %rax,%r13
+   a11f9:	mov    %rax,0x90(%rsp)
+   a1201:	ja     a1430 <CtrlComponents::configProcess(int, char**)+0x12b0>
+   a1207:	cmp    $0x1,%rax
+   a120b:	jne    a1580 <CtrlComponents::configProcess(int, char**)+0x1400>
+   a1211:	movzbl 0x10(%r14),%edx
+   a1216:	mov    %dl,0x140(%rsp)
+   a121d:	mov    0x10(%rsp),%rdx
+   a1222:	mov    %rax,0x138(%rsp)
+   a122a:	movb   $0x0,(%rdx,%rax,1)
+   a122e:	mov    0x130(%rsp),%r14
+   a1236:	callq  286f0 <__errno_location@plt>
+   a123b:	mov    %rax,%r12
+   a123e:	mov    (%rax),%eax
+   a1240:	lea    0x98(%rsp),%rsi
+   a1248:	movl   $0x0,(%r12)
+   a1250:	mov    $0xa,%edx
+   a1255:	mov    %r14,%rdi
+   a1258:	mov    %eax,%r13d
+   a125b:	callq  2a180 <strtol@plt>
+   a1260:	cmp    0x98(%rsp),%r14
+   a1268:	je     a1c36 <CtrlComponents::configProcess(int, char**)+0x1ab6>
+   a126e:	mov    (%r12),%ecx
+   a1272:	cmp    $0x22,%ecx
+   a1275:	je     a1b33 <CtrlComponents::configProcess(int, char**)+0x19b3>
+   a127b:	mov    $0x80000000,%edx
+   a1280:	mov    $0xffffffff,%esi
+   a1285:	add    %rax,%rdx
+   a1288:	cmp    %rsi,%rdx
+   a128b:	ja     a1b33 <CtrlComponents::configProcess(int, char**)+0x19b3>
+   a1291:	test   %ecx,%ecx
+   a1293:	jne    a1299 <CtrlComponents::configProcess(int, char**)+0x1119>
+   a1295:	mov    %r13d,(%r12)
+   a1299:	mov    0x130(%rsp),%rdi
+   a12a1:	cmp    0x10(%rsp),%rdi
+   a12a6:	mov    (%rsp),%rcx
+   a12aa:	mov    %eax,0x1e4(%rcx)
+   a12b0:	je     a12b7 <CtrlComponents::configProcess(int, char**)+0x1137>
+   a12b2:	callq  298a0 <operator delete(void*)@plt>
+   a12b7:	cmpb   $0x0,0x1f(%rsp)
+   a12bc:	je     a1368 <CtrlComponents::configProcess(int, char**)+0x11e8>
+   a12c2:	mov    (%rsp),%rax
+   a12c6:	mov    0x1e4(%rax),%eax
+   a12cc:	cmp    $0x1,%eax
+   a12cf:	je     a1758 <CtrlComponents::configProcess(int, char**)+0x15d8>
+   a12d5:	cmp    $0x2,%eax
+   a12d8:	je     a181f <CtrlComponents::configProcess(int, char**)+0x169f>
+   a12de:	cmp    $0x3,%eax
+   a12e1:	je     a1967 <CtrlComponents::configProcess(int, char**)+0x17e7>
+   a12e7:	cmp    $0x4,%eax
+   a12ea:	je     a1a10 <CtrlComponents::configProcess(int, char**)+0x1890>
+   a12f0:	cmp    $0x5,%eax
+   a12f3:	je     a1ac2 <CtrlComponents::configProcess(int, char**)+0x1942>
+   a12f9:	cmp    $0x6,%eax
+   a12fc:	je     a19ce <CtrlComponents::configProcess(int, char**)+0x184e>
+   a1302:	mov    0x297b7f(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1309:	lea    0x75fa8(%rip),%rsi        # 1172b8 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x1f8>
+   a1310:	mov    $0x22,%edx
+   a1315:	mov    %r14,%rdi
+   a1318:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a131d:	mov    (%r14),%rax
+   a1320:	mov    -0x18(%rax),%rax
+   a1324:	mov    0xf0(%rax,%r14,1),%r12
+   a132c:	test   %r12,%r12
+   a132f:	je     a1c47 <CtrlComponents::configProcess(int, char**)+0x1ac7>
+   a1335:	cmpb   $0x0,0x38(%r12)
+   a133b:	je     a18f0 <CtrlComponents::configProcess(int, char**)+0x1770>
+   a1341:	movsbl 0x43(%r12),%esi
+   a1347:	mov    %r14,%rdi
+   a134a:	callq  28680 <std::ostream::put(char)@plt>
+   a134f:	mov    %rax,%rdi
+   a1352:	callq  29370 <std::ostream::flush()@plt>
+   a1357:	mov    (%rsp),%rax
+   a135b:	movl   $0x1,0x1e4(%rax)
+   a1365:	nopl   (%rax)
+   a1368:	mov    0x110(%rsp),%rax
+   a1370:	jmpq   a0aa9 <CtrlComponents::configProcess(int, char**)+0x929>
+   a1375:	nopl   (%rax)
+   a1378:	test   %rax,%rax
+   a137b:	jne    a1c4c <CtrlComponents::configProcess(int, char**)+0x1acc>
+   a1381:	lea    0x10(%r15),%rdx
+   a1385:	jmpq   a0a5b <CtrlComponents::configProcess(int, char**)+0x8db>
+   a138a:	nopw   0x0(%rax,%rax,1)
+   a1390:	lea    0x76072(%rip),%rdi        # 117409 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x349>
+   a1397:	mov    $0x4,%ecx
+   a139c:	mov    %rax,%rsi
+   a139f:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a13a1:	seta   %dl
+   a13a4:	sbb    $0x0,%dl
+   a13a7:	test   %dl,%dl
+   a13a9:	jne    a13f0 <CtrlComponents::configProcess(int, char**)+0x1270>
+   a13ab:	cmpb   $0x0,0x1f(%rsp)
+   a13b0:	jne    a1640 <CtrlComponents::configProcess(int, char**)+0x14c0>
+   a13b6:	mov    (%rsp),%rcx
+   a13ba:	movq   $0x25,0x1e8(%rcx)
+   a13c5:	jmpq   a0aa9 <CtrlComponents::configProcess(int, char**)+0x929>
+   a13ca:	nopw   0x0(%rax,%rax,1)
+   a13d0:	movsd  0x762b8(%rip),%xmm1        # 117690 <typeinfo name for std::_Sp_counted_ptr_inplace<Unitree_Gripper, std::allocator<Unitree_Gripper>, (__gnu_cxx::_Lock_policy)2>+0xb0>
+   a13d8:	mov    (%rsp),%rax
+   a13dc:	minsd  %xmm0,%xmm1
+   a13e0:	movapd %xmm1,%xmm0
+   a13e4:	jmpq   a0ccc <CtrlComponents::configProcess(int, char**)+0xb4c>
+   a13e9:	nopl   0x0(%rax)
+   a13f0:	lea    0x76016(%rip),%rdi        # 11740d <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x34d>
+   a13f7:	mov    $0x4,%ecx
+   a13fc:	mov    %rax,%rsi
+   a13ff:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+   a1401:	seta   %dl
+   a1404:	sbb    $0x0,%dl
+   a1407:	test   %dl,%dl
+   a1409:	jne    a1c5a <CtrlComponents::configProcess(int, char**)+0x1ada>
+   a140f:	cmpb   $0x0,0x1f(%rsp)
+   a1414:	jne    a16c0 <CtrlComponents::configProcess(int, char**)+0x1540>
+   a141a:	mov    (%rsp),%rcx
+   a141e:	movq   $0x26,0x1e8(%rcx)
+   a1429:	jmpq   a0aa9 <CtrlComponents::configProcess(int, char**)+0x929>
+   a142e:	xchg   %ax,%ax
+   a1430:	mov    0x20(%rsp),%rdi
+   a1435:	lea    0x90(%rsp),%rsi
+   a143d:	xor    %edx,%edx
+   a143f:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a1444:	mov    0x90(%rsp),%rdx
+   a144c:	mov    %rax,0x130(%rsp)
+   a1454:	mov    %rdx,0x140(%rsp)
+   a145c:	mov    %r13,%rdx
+   a145f:	mov    %r12,%rsi
+   a1462:	mov    %rax,%rdi
+   a1465:	callq  29670 <memcpy@plt>
+   a146a:	mov    0x90(%rsp),%rax
+   a1472:	mov    0x130(%rsp),%rdx
+   a147a:	jmpq   a1222 <CtrlComponents::configProcess(int, char**)+0x10a2>
+   a147f:	nop
+   a1480:	mov    0x297a01(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1487:	lea    0x75f61(%rip),%rsi        # 1173ef <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x32f>
+   a148e:	mov    $0x19,%edx
+   a1493:	mov    %r14,%rdi
+   a1496:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a149b:	mov    0x118(%rsp),%rdx
+   a14a3:	mov    0x110(%rsp),%rsi
+   a14ab:	mov    %r14,%rdi
+   a14ae:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a14b3:	mov    %rax,%r14
+   a14b6:	mov    (%rax),%rax
+   a14b9:	mov    -0x18(%rax),%rax
+   a14bd:	mov    0xf0(%r14,%rax,1),%r12
+   a14c5:	test   %r12,%r12
+   a14c8:	je     a1c55 <CtrlComponents::configProcess(int, char**)+0x1ad5>
+   a14ce:	cmpb   $0x0,0x38(%r12)
+   a14d4:	je     a17f0 <CtrlComponents::configProcess(int, char**)+0x1670>
+   a14da:	movsbl 0x43(%r12),%esi
+   a14e0:	mov    %r14,%rdi
+   a14e3:	callq  28680 <std::ostream::put(char)@plt>
+   a14e8:	mov    %rax,%rdi
+   a14eb:	callq  29370 <std::ostream::flush()@plt>
+   a14f0:	mov    0x110(%rsp),%rax
+   a14f8:	jmpq   a115e <CtrlComponents::configProcess(int, char**)+0xfde>
+   a14fd:	nopl   (%rax)
+   a1500:	mov    %rbx,%rdi
+   a1503:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1508:	mov    (%rbx),%rax
+   a150b:	mov    $0xa,%esi
+   a1510:	mov    0x30(%rax),%rax
+   a1514:	cmp    0x29787d(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a151b:	je     a060b <CtrlComponents::configProcess(int, char**)+0x48b>
+   a1521:	mov    %rbx,%rdi
+   a1524:	callq  *%rax
+   a1526:	movsbl %al,%esi
+   a1529:	jmpq   a060b <CtrlComponents::configProcess(int, char**)+0x48b>
+   a152e:	xchg   %ax,%ax
+   a1530:	mov    0x30(%rsp),%rdi
+   a1535:	lea    0x68(%rsp),%rsi
+   a153a:	xor    %edx,%edx
+   a153c:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a1541:	mov    0x68(%rsp),%rdx
+   a1546:	mov    %rax,0x130(%rsp)
+   a154e:	mov    %rdx,0x140(%rsp)
+   a1556:	mov    %r13,%rdx
+   a1559:	mov    %r12,%rsi
+   a155c:	mov    %rax,%rdi
+   a155f:	callq  29670 <memcpy@plt>
+   a1564:	mov    0x68(%rsp),%rax
+   a1569:	mov    0x130(%rsp),%rdx
+   a1571:	jmpq   a0c30 <CtrlComponents::configProcess(int, char**)+0xab0>
+   a1576:	nopw   %cs:0x0(%rax,%rax,1)
+   a1580:	test   %rax,%rax
+   a1583:	jne    a1c91 <CtrlComponents::configProcess(int, char**)+0x1b11>
+   a1589:	mov    0x10(%rsp),%rdx
+   a158e:	jmpq   a1222 <CtrlComponents::configProcess(int, char**)+0x10a2>
+   a1593:	nopl   0x0(%rax,%rax,1)
+   a1598:	cmpq   $0x0,0x28(%rsp)
+   a159e:	je     a078b <CtrlComponents::configProcess(int, char**)+0x60b>
+   a15a4:	mov    %r14,%rax
+   a15a7:	jmpq   a105c <CtrlComponents::configProcess(int, char**)+0xedc>
+   a15ac:	nopl   0x0(%rax)
+   a15b0:	mov    0x2978d1(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a15b7:	lea    0x75bd2(%rip),%rsi        # 117190 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0xd0>
+   a15be:	mov    $0x22,%edx
+   a15c3:	mov    %r14,%rdi
+   a15c6:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a15cb:	mov    (%r14),%rax
+   a15ce:	mov    -0x18(%rax),%rax
+   a15d2:	mov    0xf0(%rax,%r14,1),%rbx
+   a15da:	test   %rbx,%rbx
+   a15dd:	je     a1c9b <CtrlComponents::configProcess(int, char**)+0x1b1b>
+   a15e3:	cmpb   $0x0,0x38(%rbx)
+   a15e7:	je     a19a0 <CtrlComponents::configProcess(int, char**)+0x1820>
+   a15ed:	movsbl 0x43(%rbx),%esi
+   a15f1:	mov    %r14,%rdi
+   a15f4:	callq  28680 <std::ostream::put(char)@plt>
+   a15f9:	mov    %rax,%rdi
+   a15fc:	callq  29370 <std::ostream::flush()@plt>
+   a1601:	xor    %edi,%edi
+   a1603:	callq  29d90 <exit@plt>
+   a1608:	nopl   0x0(%rax,%rax,1)
+   a1610:	mov    %rbx,%rdi
+   a1613:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1618:	mov    (%rbx),%rax
+   a161b:	mov    $0xa,%esi
+   a1620:	mov    0x30(%rax),%rax
+   a1624:	cmp    0x29776d(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a162b:	je     a06ff <CtrlComponents::configProcess(int, char**)+0x57f>
+   a1631:	mov    %rbx,%rdi
+   a1634:	callq  *%rax
+   a1636:	movsbl %al,%esi
+   a1639:	jmpq   a06ff <CtrlComponents::configProcess(int, char**)+0x57f>
+   a163e:	xchg   %ax,%ax
+   a1640:	mov    0x297841(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1647:	lea    0x75da1(%rip),%rsi        # 1173ef <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x32f>
+   a164e:	mov    $0x19,%edx
+   a1653:	mov    %r14,%rdi
+   a1656:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a165b:	mov    0x118(%rsp),%rdx
+   a1663:	mov    0x110(%rsp),%rsi
+   a166b:	mov    %r14,%rdi
+   a166e:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1673:	mov    %rax,%r12
+   a1676:	mov    (%rax),%rax
+   a1679:	mov    -0x18(%rax),%rax
+   a167d:	mov    0xf0(%r12,%rax,1),%r14
+   a1685:	test   %r14,%r14
+   a1688:	je     a1c0f <CtrlComponents::configProcess(int, char**)+0x1a8f>
+   a168e:	cmpb   $0x0,0x38(%r14)
+   a1693:	je     a1a50 <CtrlComponents::configProcess(int, char**)+0x18d0>
+   a1699:	movsbl 0x43(%r14),%esi
+   a169e:	mov    %r12,%rdi
+   a16a1:	callq  28680 <std::ostream::put(char)@plt>
+   a16a6:	mov    %rax,%rdi
+   a16a9:	callq  29370 <std::ostream::flush()@plt>
+   a16ae:	mov    0x110(%rsp),%rax
+   a16b6:	jmpq   a13b6 <CtrlComponents::configProcess(int, char**)+0x1236>
+   a16bb:	nopl   0x0(%rax,%rax,1)
+   a16c0:	mov    0x2977c1(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a16c7:	lea    0x75d21(%rip),%rsi        # 1173ef <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x32f>
+   a16ce:	mov    $0x19,%edx
+   a16d3:	mov    %r14,%rdi
+   a16d6:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a16db:	mov    0x118(%rsp),%rdx
+   a16e3:	mov    0x110(%rsp),%rsi
+   a16eb:	mov    %r14,%rdi
+   a16ee:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a16f3:	mov    %rax,%r12
+   a16f6:	mov    (%rax),%rax
+   a16f9:	mov    -0x18(%rax),%rax
+   a16fd:	mov    0xf0(%r12,%rax,1),%r14
+   a1705:	test   %r14,%r14
+   a1708:	je     a1c14 <CtrlComponents::configProcess(int, char**)+0x1a94>
+   a170e:	cmpb   $0x0,0x38(%r14)
+   a1713:	je     a1a7e <CtrlComponents::configProcess(int, char**)+0x18fe>
+   a1719:	movsbl 0x43(%r14),%esi
+   a171e:	mov    %r12,%rdi
+   a1721:	callq  28680 <std::ostream::put(char)@plt>
+   a1726:	mov    %rax,%rdi
+   a1729:	callq  29370 <std::ostream::flush()@plt>
+   a172e:	mov    0x110(%rsp),%rax
+   a1736:	jmpq   a141a <CtrlComponents::configProcess(int, char**)+0x129a>
+   a173b:	nopl   0x0(%rax,%rax,1)
+   a1740:	mov    0x297759(%rip),%rsi        # 338ea0 <typeinfo for std::_Sp_make_shared_tag@@Base+0x1120>
+   a1747:	mov    %rbp,%rdi
+   a174a:	callq  *%rax
+   a174c:	mov    %rax,%r12
+   a174f:	jmpq   a0877 <CtrlComponents::configProcess(int, char**)+0x6f7>
+   a1754:	nopl   0x0(%rax)
+   a1758:	mov    0x297729(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a175f:	lea    0x75a52(%rip),%rsi        # 1171b8 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0xf8>
+   a1766:	mov    $0x24,%edx
+   a176b:	mov    %r14,%rdi
+   a176e:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1773:	mov    (%r14),%rax
+   a1776:	mov    -0x18(%rax),%rax
+   a177a:	mov    0xf0(%rax,%r14,1),%r12
+   a1782:	test   %r12,%r12
+   a1785:	je     a1c42 <CtrlComponents::configProcess(int, char**)+0x1ac2>
+   a178b:	cmpb   $0x0,0x38(%r12)
+   a1791:	je     a17c0 <CtrlComponents::configProcess(int, char**)+0x1640>
+   a1793:	movsbl 0x43(%r12),%esi
+   a1799:	mov    %r14,%rdi
+   a179c:	callq  28680 <std::ostream::put(char)@plt>
+   a17a1:	mov    %rax,%rdi
+   a17a4:	callq  29370 <std::ostream::flush()@plt>
+   a17a9:	mov    0x110(%rsp),%rax
+   a17b1:	jmpq   a0aa9 <CtrlComponents::configProcess(int, char**)+0x929>
+   a17b6:	nopw   %cs:0x0(%rax,%rax,1)
+   a17c0:	mov    %r12,%rdi
+   a17c3:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a17c8:	mov    (%r12),%rax
+   a17cc:	mov    $0xa,%esi
+   a17d1:	mov    0x30(%rax),%rax
+   a17d5:	cmp    0x2975bc(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a17dc:	je     a1799 <CtrlComponents::configProcess(int, char**)+0x1619>
+   a17de:	mov    %r12,%rdi
+   a17e1:	callq  *%rax
+   a17e3:	movsbl %al,%esi
+   a17e6:	jmp    a1799 <CtrlComponents::configProcess(int, char**)+0x1619>
+   a17e8:	nopl   0x0(%rax,%rax,1)
+   a17f0:	mov    %r12,%rdi
+   a17f3:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a17f8:	mov    (%r12),%rax
+   a17fc:	mov    $0xa,%esi
+   a1801:	mov    0x30(%rax),%rax
+   a1805:	cmp    0x29758c(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a180c:	je     a14e0 <CtrlComponents::configProcess(int, char**)+0x1360>
+   a1812:	mov    %r12,%rdi
+   a1815:	callq  *%rax
+   a1817:	movsbl %al,%esi
+   a181a:	jmpq   a14e0 <CtrlComponents::configProcess(int, char**)+0x1360>
+   a181f:	mov    0x297662(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1826:	lea    0x759b3(%rip),%rsi        # 1171e0 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x120>
+   a182d:	mov    $0x25,%edx
+   a1832:	mov    %r14,%rdi
+   a1835:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a183a:	mov    (%r14),%rax
+   a183d:	mov    -0x18(%rax),%rax
+   a1841:	mov    0xf0(%rax,%r14,1),%r12
+   a1849:	test   %r12,%r12
+   a184c:	jne    a178b <CtrlComponents::configProcess(int, char**)+0x160b>
+   a1852:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1857:	nopw   0x0(%rax,%rax,1)
+   a1860:	mov    %r13,%rdi
+   a1863:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1868:	mov    0x0(%r13),%rax
+   a186c:	mov    $0xa,%esi
+   a1871:	mov    0x30(%rax),%rax
+   a1875:	cmp    0x29751c(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a187c:	je     a0eb2 <CtrlComponents::configProcess(int, char**)+0xd32>
+   a1882:	mov    %r13,%rdi
+   a1885:	callq  *%rax
+   a1887:	movsbl %al,%esi
+   a188a:	jmpq   a0eb2 <CtrlComponents::configProcess(int, char**)+0xd32>
+   a188f:	movapd %xmm1,%xmm0
+   a1893:	jmpq   a0e36 <CtrlComponents::configProcess(int, char**)+0xcb6>
+   a1898:	mov    %rax,%rbx
+   a189b:	mov    0x29737e(%rip),%rax        # 338c20 <vtable for TiXmlDocument@@Base+0x520>
+   a18a2:	mov    0xf8(%rsp),%rdi
+   a18aa:	add    $0x10,%rax
+   a18ae:	test   %rdi,%rdi
+   a18b1:	mov    %rax,0xa0(%rsp)
+   a18b9:	je     a18c9 <CtrlComponents::configProcess(int, char**)+0x1749>
+   a18bb:	cmp    0x29767e(%rip),%rdi        # 338f40 <TiXmlString::nullrep_@@Base-0x16c0>
+   a18c2:	je     a18c9 <CtrlComponents::configProcess(int, char**)+0x1749>
+   a18c4:	callq  29ed0 <operator delete[](void*)@plt>
+   a18c9:	mov    0x8(%rsp),%rdi
+   a18ce:	callq  28880 <TiXmlNode::~TiXmlNode()@plt>
+   a18d3:	mov    %rbx,%rdi
+   a18d6:	callq  2a970 <_Unwind_Resume@plt>
+   a18db:	lea    0x3ac5e(%rip),%rdi        # dc540 <_fini+0xc>
+   a18e2:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a18e7:	nopw   0x0(%rax,%rax,1)
+   a18f0:	mov    %r12,%rdi
+   a18f3:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a18f8:	mov    (%r12),%rax
+   a18fc:	mov    $0xa,%esi
+   a1901:	mov    0x30(%rax),%rax
+   a1905:	cmp    0x29748c(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a190c:	je     a1347 <CtrlComponents::configProcess(int, char**)+0x11c7>
+   a1912:	mov    %r12,%rdi
+   a1915:	callq  *%rax
+   a1917:	movsbl %al,%esi
+   a191a:	jmpq   a1347 <CtrlComponents::configProcess(int, char**)+0x11c7>
+   a191f:	mov    0x30(%rsp),%rdi
+   a1924:	lea    0x58(%rsp),%rsi
+   a1929:	xor    %edx,%edx
+   a192b:	callq  2aa30 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@plt>
+   a1930:	mov    0x58(%rsp),%rdx
+   a1935:	mov    %rax,0x130(%rsp)
+   a193d:	mov    %rdx,0x140(%rsp)
+   a1945:	mov    0x38(%rsp),%rdx
+   a194a:	mov    %r12,%rsi
+   a194d:	mov    %rax,%rdi
+   a1950:	callq  29670 <memcpy@plt>
+   a1955:	mov    0x58(%rsp),%rax
+   a195a:	mov    0x130(%rsp),%rdx
+   a1962:	jmpq   a0d8d <CtrlComponents::configProcess(int, char**)+0xc0d>
+   a1967:	mov    0x29751a(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a196e:	lea    0x75893(%rip),%rsi        # 117208 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x148>
+   a1975:	mov    $0x23,%edx
+   a197a:	mov    %r14,%rdi
+   a197d:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1982:	mov    (%r14),%rax
+   a1985:	mov    -0x18(%rax),%rax
+   a1989:	mov    0xf0(%rax,%r14,1),%r12
+   a1991:	test   %r12,%r12
+   a1994:	jne    a178b <CtrlComponents::configProcess(int, char**)+0x160b>
+   a199a:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a199f:	nop
+   a19a0:	mov    %rbx,%rdi
+   a19a3:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a19a8:	mov    (%rbx),%rax
+   a19ab:	mov    $0xa,%esi
+   a19b0:	mov    0x30(%rax),%rax
+   a19b4:	cmp    0x2973dd(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a19bb:	je     a15f1 <CtrlComponents::configProcess(int, char**)+0x1471>
+   a19c1:	mov    %rbx,%rdi
+   a19c4:	callq  *%rax
+   a19c6:	movsbl %al,%esi
+   a19c9:	jmpq   a15f1 <CtrlComponents::configProcess(int, char**)+0x1471>
+   a19ce:	mov    0x2974b3(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a19d5:	lea    0x758ac(%rip),%rsi        # 117288 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x1c8>
+   a19dc:	mov    $0x29,%edx
+   a19e1:	mov    %r14,%rdi
+   a19e4:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a19e9:	mov    (%r14),%rax
+   a19ec:	mov    -0x18(%rax),%rax
+   a19f0:	mov    0xf0(%rax,%r14,1),%r12
+   a19f8:	test   %r12,%r12
+   a19fb:	jne    a178b <CtrlComponents::configProcess(int, char**)+0x160b>
+   a1a01:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1a06:	nopw   %cs:0x0(%rax,%rax,1)
+   a1a10:	mov    0x297471(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1a17:	lea    0x75812(%rip),%rsi        # 117230 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x170>
+   a1a1e:	mov    $0x29,%edx
+   a1a23:	mov    %r14,%rdi
+   a1a26:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1a2b:	mov    (%r14),%rax
+   a1a2e:	mov    -0x18(%rax),%rax
+   a1a32:	mov    0xf0(%rax,%r14,1),%r12
+   a1a3a:	test   %r12,%r12
+   a1a3d:	jne    a178b <CtrlComponents::configProcess(int, char**)+0x160b>
+   a1a43:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1a48:	nopl   0x0(%rax,%rax,1)
+   a1a50:	mov    %r14,%rdi
+   a1a53:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1a58:	mov    (%r14),%rax
+   a1a5b:	mov    $0xa,%esi
+   a1a60:	mov    0x30(%rax),%rax
+   a1a64:	cmp    0x29732d(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a1a6b:	je     a169e <CtrlComponents::configProcess(int, char**)+0x151e>
+   a1a71:	mov    %r14,%rdi
+   a1a74:	callq  *%rax
+   a1a76:	movsbl %al,%esi
+   a1a79:	jmpq   a169e <CtrlComponents::configProcess(int, char**)+0x151e>
+   a1a7e:	mov    %r14,%rdi
+   a1a81:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1a86:	mov    (%r14),%rax
+   a1a89:	mov    $0xa,%esi
+   a1a8e:	mov    0x30(%rax),%rax
+   a1a92:	cmp    0x2972ff(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a1a99:	je     a171e <CtrlComponents::configProcess(int, char**)+0x159e>
+   a1a9f:	mov    %r14,%rdi
+   a1aa2:	callq  *%rax
+   a1aa4:	movsbl %al,%esi
+   a1aa7:	jmpq   a171e <CtrlComponents::configProcess(int, char**)+0x159e>
+   a1aac:	cmpq   $0x0,0x38(%rsp)
+   a1ab2:	jne    a1d53 <CtrlComponents::configProcess(int, char**)+0x1bd3>
+   a1ab8:	mov    0x28(%rsp),%rdx
+   a1abd:	jmpq   a0d8d <CtrlComponents::configProcess(int, char**)+0xc0d>
+   a1ac2:	mov    0x2973bf(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1ac9:	lea    0x75790(%rip),%rsi        # 117260 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x1a0>
+   a1ad0:	mov    $0x27,%edx
+   a1ad5:	mov    %r14,%rdi
+   a1ad8:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1add:	mov    (%r14),%rax
+   a1ae0:	mov    -0x18(%rax),%rax
+   a1ae4:	mov    0xf0(%rax,%r14,1),%r12
+   a1aec:	test   %r12,%r12
+   a1aef:	jne    a178b <CtrlComponents::configProcess(int, char**)+0x160b>
+   a1af5:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1afa:	nopw   0x0(%rax,%rax,1)
+   a1b00:	mov    %rbx,%rdi
+   a1b03:	callq  29c90 <std::ctype<char>::_M_widen_init() const@plt>
+   a1b08:	mov    (%rbx),%rax
+   a1b0b:	mov    $0xa,%esi
+   a1b10:	mov    0x30(%rax),%rax
+   a1b14:	cmp    0x29727d(%rip),%rax        # 338d98 <std::ctype<char>::do_widen(char) const@@Base+0x30b058>
+   a1b1b:	je     a0977 <CtrlComponents::configProcess(int, char**)+0x7f7>
+   a1b21:	mov    %rbx,%rdi
+   a1b24:	callq  *%rax
+   a1b26:	movsbl %al,%esi
+   a1b29:	jmpq   a0977 <CtrlComponents::configProcess(int, char**)+0x7f7>
+   a1b2e:	callq  29c00 <__stack_chk_fail@plt>
+   a1b33:	lea    0x757e9(%rip),%rdi        # 117323 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x263>
+   a1b3a:	callq  2a240 <std::__throw_out_of_range(char const*)@plt>
+   a1b3f:	cmpl   $0x0,(%r12)
+   a1b44:	mov    %rax,%rbx
+   a1b47:	jne    a1b4d <CtrlComponents::configProcess(int, char**)+0x19cd>
+   a1b49:	mov    %r13d,(%r12)
+   a1b4d:	mov    0x20(%rsp),%rax
+   a1b52:	mov    0x130(%rsp),%rdi
+   a1b5a:	add    $0x10,%rax
+   a1b5e:	cmp    %rax,%rdi
+   a1b61:	je     a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1b63:	callq  298a0 <operator delete(void*)@plt>
+   a1b68:	mov    0x110(%rsp),%rdi
+   a1b70:	lea    0x10(%r15),%rax
+   a1b74:	cmp    %rax,%rdi
+   a1b77:	je     a189b <CtrlComponents::configProcess(int, char**)+0x171b>
+   a1b7d:	callq  298a0 <operator delete(void*)@plt>
+   a1b82:	jmpq   a189b <CtrlComponents::configProcess(int, char**)+0x171b>
+   a1b87:	lea    0x75795(%rip),%rdi        # 117323 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x263>
+   a1b8e:	callq  2a240 <std::__throw_out_of_range(char const*)@plt>
+   a1b93:	cmpl   $0x0,(%r12)
+   a1b98:	mov    %rax,%rbx
+   a1b9b:	jne    a1ba1 <CtrlComponents::configProcess(int, char**)+0x1a21>
+   a1b9d:	mov    %r14d,(%r12)
+   a1ba1:	mov    0x130(%rsp),%rdi
+   a1ba9:	add    $0x10,%rbp
+   a1bad:	cmp    %rbp,%rdi
+   a1bb0:	jne    a1b63 <CtrlComponents::configProcess(int, char**)+0x19e3>
+   a1bb2:	jmp    a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1bb4:	lea    0x75768(%rip),%rdi        # 117323 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x263>
+   a1bbb:	callq  291f0 <std::__throw_invalid_argument(char const*)@plt>
+   a1bc0:	mov    %rax,%rbx
+   a1bc3:	jmp    a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1bc5:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1bca:	lea    0x41f53(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1bd1:	callq  2a240 <std::__throw_out_of_range(char const*)@plt>
+   a1bd6:	lea    0x41f47(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1bdd:	callq  291f0 <std::__throw_invalid_argument(char const*)@plt>
+   a1be2:	cmpl   $0x0,(%r12)
+   a1be7:	mov    %rax,%rbx
+   a1bea:	jne    a1bf0 <CtrlComponents::configProcess(int, char**)+0x1a70>
+   a1bec:	mov    %r14d,(%r12)
+   a1bf0:	mov    0x30(%rsp),%rax
+   a1bf5:	mov    0x130(%rsp),%rdi
+   a1bfd:	add    $0x10,%rax
+   a1c01:	cmp    %rax,%rdi
+   a1c04:	jne    a1b63 <CtrlComponents::configProcess(int, char**)+0x19e3>
+   a1c0a:	jmpq   a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1c0f:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c14:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c19:	mov    %rax,%rbp
+   a1c1c:	mov    %rbx,%rdi
+   a1c1f:	mov    $0x1e0,%esi
+   a1c24:	callq  29a50 <operator delete(void*, unsigned long)@plt>
+   a1c29:	mov    %rbp,%rbx
+   a1c2c:	jmpq   a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1c31:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c36:	lea    0x756e6(%rip),%rdi        # 117323 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x263>
+   a1c3d:	callq  291f0 <std::__throw_invalid_argument(char const*)@plt>
+   a1c42:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c47:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c4c:	lea    0x10(%r15),%rax
+   a1c50:	jmpq   a11a2 <CtrlComponents::configProcess(int, char**)+0x1022>
+   a1c55:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1c5a:	mov    0x297227(%rip),%r14        # 338e88 <std::cout@GLIBCXX_3.4>
+   a1c61:	lea    0x757a9(%rip),%rsi        # 117411 <typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (Loop::*)(), Loop*> > >+0x351>
+   a1c68:	mov    $0x19,%edx
+   a1c6d:	mov    %r14,%rdi
+   a1c70:	callq  29c80 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+   a1c75:	mov    %r14,%rdi
+   a1c78:	callq  28eb0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@plt>
+   a1c7d:	or     $0xffffffff,%edi
+   a1c80:	callq  29d90 <exit@plt>
+   a1c85:	lea    0x3a8b4(%rip),%rdi        # dc540 <_fini+0xc>
+   a1c8c:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a1c91:	mov    0x10(%rsp),%rax
+   a1c96:	jmpq   a145c <CtrlComponents::configProcess(int, char**)+0x12dc>
+   a1c9b:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1ca0:	lea    0x3a899(%rip),%rdi        # dc540 <_fini+0xc>
+   a1ca7:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a1cac:	lea    0x3a88d(%rip),%rdi        # dc540 <_fini+0xc>
+   a1cb3:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a1cb8:	jmpq   a1bc0 <CtrlComponents::configProcess(int, char**)+0x1a40>
+   a1cbd:	lea    0x3a87c(%rip),%rdi        # dc540 <_fini+0xc>
+   a1cc4:	callq  293e0 <std::__throw_logic_error(char const*)@plt>
+   a1cc9:	lea    0x41e54(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1cd0:	callq  2a240 <std::__throw_out_of_range(char const*)@plt>
+   a1cd5:	mov    %rbp,%rdi
+   a1cd8:	mov    %rax,%rbx
+   a1cdb:	callq  298a0 <operator delete(void*)@plt>
+   a1ce0:	jmpq   a1b68 <CtrlComponents::configProcess(int, char**)+0x19e8>
+   a1ce5:	jmpq   a1b93 <CtrlComponents::configProcess(int, char**)+0x1a13>
+   a1cea:	lea    0x41e33(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1cf1:	callq  291f0 <std::__throw_invalid_argument(char const*)@plt>
+   a1cf6:	lea    0x10(%r15),%rax
+   a1cfa:	jmpq   a03d4 <CtrlComponents::configProcess(int, char**)+0x254>
+   a1cff:	mov    %rax,%rbx
+   a1d02:	jmpq   a1ba1 <CtrlComponents::configProcess(int, char**)+0x1a21>
+   a1d07:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1d0c:	lea    0x41e11(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1d13:	callq  2a240 <std::__throw_out_of_range(char const*)@plt>
+   a1d18:	lea    0x41e05(%rip),%rdi        # e3b24 <typeinfo name for State_Teach+0xd4>
+   a1d1f:	callq  291f0 <std::__throw_invalid_argument(char const*)@plt>
+   a1d24:	cmpl   $0x0,0x0(%r13)
+   a1d29:	mov    %rax,%rbx
+   a1d2c:	jne    a1bf0 <CtrlComponents::configProcess(int, char**)+0x1a70>
+   a1d32:	mov    0x38(%rsp),%eax
+   a1d36:	mov    %eax,0x0(%r13)
+   a1d3a:	jmpq   a1bf0 <CtrlComponents::configProcess(int, char**)+0x1a70>
+   a1d3f:	jmpq   a1bc0 <CtrlComponents::configProcess(int, char**)+0x1a40>
+   a1d44:	mov    0x28(%rsp),%rax
+   a1d49:	jmpq   a1556 <CtrlComponents::configProcess(int, char**)+0x13d6>
+   a1d4e:	callq  29e60 <std::__throw_bad_cast()@plt>
+   a1d53:	mov    0x28(%rsp),%rax
+   a1d58:	jmpq   a1945 <CtrlComponents::configProcess(int, char**)+0x17c5>
+   a1d5d:	nop
+   a1d5e:	xchg   %ax,%ax
