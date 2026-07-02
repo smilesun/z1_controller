@@ -113,19 +113,19 @@ int main(int argc, char **argv){
     states.push_back(new State_Trajectory(ctrlComp));
     states.push_back(new State_Calibration(ctrlComp));
     // - PASSIVE: motors relax / no active control.
-  - JOINTCTRL (State_JointSpace): direct joint‑space control.
-  - CARTESIAN: control end‑effector pose.
-  - MOVEJ: point‑to‑point joint trajectory.
-  - MOVEL: linear end‑effector trajectory.
-  - MOVEC: circular end‑effector trajectory.
-  - TRAJECTORY: follow a predefined trajectory.
-  - BACKTOSTART: move to a known home pose.
-  - CALIBRATION: calibration routine.
-  - TEACH: record motions.
-  - TEACHREPEAT: replay recorded motions.
-  - SAVESTATE: save current pose to CSV.
-  - TOSTATE: move to a saved pose.
-  - LOWCMD: low‑level direct command state (usually SDK‑driven).
+    // - JOINTCTRL (State_JointSpace): direct joint-space control.
+    // - CARTESIAN: control end-effector pose.
+    // - MOVEJ: point-to-point joint trajectory.
+    // - MOVEL: linear end-effector trajectory.
+    // - MOVEC: circular end-effector trajectory.
+    // - TRAJECTORY: follow a predefined trajectory.
+    // - BACKTOSTART: move to a known home pose.
+    // - CALIBRATION: calibration routine.
+    // - TEACH: record motions.
+    // - TEACHREPEAT: replay recorded motions.
+    // - SAVESTATE: save current pose to CSV.
+    // - TOSTATE: move to a saved pose.
+    // - LOWCMD: low-level direct command state (usually SDK-driven).
 
 
     FiniteStateMachine *fsm;
